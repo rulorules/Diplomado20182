@@ -14,6 +14,8 @@
 		A50E482A204AFA7D00F459D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E4828204AFA7D00F459D6 /* LaunchScreen.storyboard */; };
 		A50E4835204AFA7D00F459D6 /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E4834204AFA7D00F459D6 /* weatherTests.swift */; };
 		A50E4840204AFA7D00F459D6 /* weatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E483F204AFA7D00F459D6 /* weatherUITests.swift */; };
+		A50E484E204B0EB400F459D6 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E484D204B0EB400F459D6 /* MyApplication.swift */; };
+		A50E4850204B0F4E00F459D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E484F204B0F4E00F459D6 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A50E483B204AFA7D00F459D6 /* weatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E483F204AFA7D00F459D6 /* weatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherUITests.swift; sourceTree = "<group>"; };
 		A50E4841204AFA7D00F459D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50E484D204B0EB400F459D6 /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
+		A50E484F204B0F4E00F459D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				A50E481F204AFA7D00F459D6 /* AppDelegate.swift */,
+				A50E484F204B0F4E00F459D6 /* main.swift */,
+				A50E484D204B0EB400F459D6 /* MyApplication.swift */,
 				A50E4821204AFA7D00F459D6 /* ViewController.swift */,
 				A50E4823204AFA7D00F459D6 /* Main.storyboard */,
 				A50E4826204AFA7D00F459D6 /* Assets.xcassets */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50E4822204AFA7D00F459D6 /* ViewController.swift in Sources */,
+				A50E484E204B0EB400F459D6 /* MyApplication.swift in Sources */,
+				A50E4850204B0F4E00F459D6 /* main.swift in Sources */,
 				A50E4820204AFA7D00F459D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

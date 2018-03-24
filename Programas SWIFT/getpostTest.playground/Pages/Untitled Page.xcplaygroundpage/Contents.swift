@@ -4,7 +4,7 @@ import PlaygroundSupport
 
 
 
-let username = "ARREN\\TST01g"
+let username = "ARREN\\TST01"
 let password = "JXF83V"
 let loginString = String(format: "%@:%@", username, password)
 let loginData = loginString.data(using: String.Encoding.utf8)!

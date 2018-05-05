@@ -78,8 +78,6 @@ class ViewController: UIViewController {
                     
                     print(parsedJson.token)
                     
-                    
-                    
                     /********************************/
                     let user = User(email: "admin@example.com", password: "tacocat1234")
                     

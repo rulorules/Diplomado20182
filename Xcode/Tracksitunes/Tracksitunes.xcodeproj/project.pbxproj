@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F264454D8DC65F19DDC41F9 /* Pods_Tracksitunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4533AFC6582430FCBAAC87E8 /* Pods_Tracksitunes.framework */; };
+		A51290DB2093F7DC0041BAF9 /* TracksitunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51290DA2093F7DC0041BAF9 /* TracksitunesTests.swift */; };
+		A51290E62093F7DC0041BAF9 /* TracksitunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51290E52093F7DC0041BAF9 /* TracksitunesUITests.swift */; };
+		A512912820940AC70041BAF9 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512911F20940AC70041BAF9 /* Track.swift */; };
+		A512912920940AC70041BAF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A512912020940AC70041BAF9 /* Assets.xcassets */; };
+		A512912A20940AC70041BAF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A512912120940AC70041BAF9 /* LaunchScreen.storyboard */; };
+		A512912B20940AC70041BAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A512912320940AC70041BAF9 /* Main.storyboard */; };
+		A512912C20940AC70041BAF9 /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512912520940AC70041BAF9 /* TracksTableViewController.swift */; };
+		A512912D20940AC70041BAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512912620940AC70041BAF9 /* AppDelegate.swift */; };
+		A512912E20940AC70041BAF9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A512912720940AC70041BAF9 /* Info.plist */; };
+		AD751C206393E949E479666D /* Pods_TracksitunesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC6EE03F576F6D69A8D38A2 /* Pods_TracksitunesTests.framework */; };
+		B48B8D8DB18F03FCD1DE8650 /* Pods_TracksitunesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319C9A554E1BF03C9A5A73BC /* Pods_TracksitunesUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A51290D72093F7DC0041BAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A51290BA2093F7DA0041BAF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A51290C12093F7DA0041BAF9;
+			remoteInfo = Tracksitunes;
+		};
+		A51290E22093F7DC0041BAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A51290BA2093F7DA0041BAF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A51290C12093F7DA0041BAF9;
+			remoteInfo = Tracksitunes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		319C9A554E1BF03C9A5A73BC /* Pods_TracksitunesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TracksitunesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4533AFC6582430FCBAAC87E8 /* Pods_Tracksitunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracksitunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		711C224078F8F035E0E8F9D1 /* Pods-TracksitunesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksitunesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TracksitunesTests/Pods-TracksitunesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74E28E04B1934FE3D853AD61 /* Pods-TracksitunesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksitunesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TracksitunesUITests/Pods-TracksitunesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E827A9A143A329F786D73AE /* Pods-TracksitunesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksitunesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TracksitunesTests/Pods-TracksitunesTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B3389B794C3E781AAB8B35F /* Pods-Tracksitunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracksitunes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracksitunes/Pods-Tracksitunes.debug.xcconfig"; sourceTree = "<group>"; };
+		9FC6EE03F576F6D69A8D38A2 /* Pods_TracksitunesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TracksitunesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A48884CFF718CE7ADA683187 /* Pods-TracksitunesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksitunesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TracksitunesUITests/Pods-TracksitunesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A51290C22093F7DA0041BAF9 /* Tracksitunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracksitunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51290D62093F7DC0041BAF9 /* TracksitunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracksitunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51290DA2093F7DC0041BAF9 /* TracksitunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksitunesTests.swift; sourceTree = "<group>"; };
+		A51290DC2093F7DC0041BAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51290E12093F7DC0041BAF9 /* TracksitunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracksitunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51290E52093F7DC0041BAF9 /* TracksitunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksitunesUITests.swift; sourceTree = "<group>"; };
+		A51290E72093F7DC0041BAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A512911F20940AC70041BAF9 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		A512912020940AC70041BAF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A512912220940AC70041BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A512912420940AC70041BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A512912520940AC70041BAF9 /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
+		A512912620940AC70041BAF9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A512912720940AC70041BAF9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF957A77AB0C7417B5665269 /* Pods-Tracksitunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracksitunes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracksitunes/Pods-Tracksitunes.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A51290BF2093F7DA0041BAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F264454D8DC65F19DDC41F9 /* Pods_Tracksitunes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290D32093F7DC0041BAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD751C206393E949E479666D /* Pods_TracksitunesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290DE2093F7DC0041BAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48B8D8DB18F03FCD1DE8650 /* Pods_TracksitunesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1016568A62C89E75A141545D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4533AFC6582430FCBAAC87E8 /* Pods_Tracksitunes.framework */,
+				9FC6EE03F576F6D69A8D38A2 /* Pods_TracksitunesTests.framework */,
+				319C9A554E1BF03C9A5A73BC /* Pods_TracksitunesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		870053832AC0586BE791813D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B3389B794C3E781AAB8B35F /* Pods-Tracksitunes.debug.xcconfig */,
+				CF957A77AB0C7417B5665269 /* Pods-Tracksitunes.release.xcconfig */,
+				711C224078F8F035E0E8F9D1 /* Pods-TracksitunesTests.debug.xcconfig */,
+				7E827A9A143A329F786D73AE /* Pods-TracksitunesTests.release.xcconfig */,
+				74E28E04B1934FE3D853AD61 /* Pods-TracksitunesUITests.debug.xcconfig */,
+				A48884CFF718CE7ADA683187 /* Pods-TracksitunesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A51290B92093F7DA0041BAF9 = {
+			isa = PBXGroup;
+			children = (
+				A512911E20940AC70041BAF9 /* Tracksitunes */,
+				A51290D92093F7DC0041BAF9 /* TracksitunesTests */,
+				A51290E42093F7DC0041BAF9 /* TracksitunesUITests */,
+				A51290C32093F7DA0041BAF9 /* Products */,
+				870053832AC0586BE791813D /* Pods */,
+				1016568A62C89E75A141545D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A51290C32093F7DA0041BAF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A51290C22093F7DA0041BAF9 /* Tracksitunes.app */,
+				A51290D62093F7DC0041BAF9 /* TracksitunesTests.xctest */,
+				A51290E12093F7DC0041BAF9 /* TracksitunesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A51290D92093F7DC0041BAF9 /* TracksitunesTests */ = {
+			isa = PBXGroup;
+			children = (
+				A51290DA2093F7DC0041BAF9 /* TracksitunesTests.swift */,
+				A51290DC2093F7DC0041BAF9 /* Info.plist */,
+			);
+			path = TracksitunesTests;
+			sourceTree = "<group>";
+		};
+		A51290E42093F7DC0041BAF9 /* TracksitunesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A51290E52093F7DC0041BAF9 /* TracksitunesUITests.swift */,
+				A51290E72093F7DC0041BAF9 /* Info.plist */,
+			);
+			path = TracksitunesUITests;
+			sourceTree = "<group>";
+		};
+		A512911E20940AC70041BAF9 /* Tracksitunes */ = {
+			isa = PBXGroup;
+			children = (
+				A512911F20940AC70041BAF9 /* Track.swift */,
+				A512912020940AC70041BAF9 /* Assets.xcassets */,
+				A512912120940AC70041BAF9 /* LaunchScreen.storyboard */,
+				A512912320940AC70041BAF9 /* Main.storyboard */,
+				A512912520940AC70041BAF9 /* TracksTableViewController.swift */,
+				A512912620940AC70041BAF9 /* AppDelegate.swift */,
+				A512912720940AC70041BAF9 /* Info.plist */,
+			);
+			name = Tracksitunes;
+			path = ../../../../.Trash/Tracksitunes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A51290C12093F7DA0041BAF9 /* Tracksitunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51290EA2093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "Tracksitunes" */;
+			buildPhases = (
+				E2874D1E05E847ACCDA71309 /* [CP] Check Pods Manifest.lock */,
+				A51290BE2093F7DA0041BAF9 /* Sources */,
+				A51290BF2093F7DA0041BAF9 /* Frameworks */,
+				A51290C02093F7DA0041BAF9 /* Resources */,
+				60895CF874DCD720A8174B56 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tracksitunes;
+			productName = Tracksitunes;
+			productReference = A51290C22093F7DA0041BAF9 /* Tracksitunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A51290D52093F7DC0041BAF9 /* TracksitunesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51290ED2093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "TracksitunesTests" */;
+			buildPhases = (
+				74C680A22DDC95E5A6B68071 /* [CP] Check Pods Manifest.lock */,
+				A51290D22093F7DC0041BAF9 /* Sources */,
+				A51290D32093F7DC0041BAF9 /* Frameworks */,
+				A51290D42093F7DC0041BAF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A51290D82093F7DC0041BAF9 /* PBXTargetDependency */,
+			);
+			name = TracksitunesTests;
+			productName = TracksitunesTests;
+			productReference = A51290D62093F7DC0041BAF9 /* TracksitunesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A51290E02093F7DC0041BAF9 /* TracksitunesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51290F02093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "TracksitunesUITests" */;
+			buildPhases = (
+				353B5667B219D97F146C4202 /* [CP] Check Pods Manifest.lock */,
+				A51290DD2093F7DC0041BAF9 /* Sources */,
+				A51290DE2093F7DC0041BAF9 /* Frameworks */,
+				A51290DF2093F7DC0041BAF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A51290E32093F7DC0041BAF9 /* PBXTargetDependency */,
+			);
+			name = TracksitunesUITests;
+			productName = TracksitunesUITests;
+			productReference = A51290E12093F7DC0041BAF9 /* TracksitunesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A51290BA2093F7DA0041BAF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = d182_raul_j;
+				TargetAttributes = {
+					A51290C12093F7DA0041BAF9 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					A51290D52093F7DC0041BAF9 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A51290C12093F7DA0041BAF9;
+					};
+					A51290E02093F7DC0041BAF9 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A51290C12093F7DA0041BAF9;
+					};
+				};
+			};
+			buildConfigurationList = A51290BD2093F7DA0041BAF9 /* Build configuration list for PBXProject "Tracksitunes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A51290B92093F7DA0041BAF9;
+			productRefGroup = A51290C32093F7DA0041BAF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A51290C12093F7DA0041BAF9 /* Tracksitunes */,
+				A51290D52093F7DC0041BAF9 /* TracksitunesTests */,
+				A51290E02093F7DC0041BAF9 /* TracksitunesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A51290C02093F7DA0041BAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A512912E20940AC70041BAF9 /* Info.plist in Resources */,
+				A512912B20940AC70041BAF9 /* Main.storyboard in Resources */,
+				A512912920940AC70041BAF9 /* Assets.xcassets in Resources */,
+				A512912A20940AC70041BAF9 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290D42093F7DC0041BAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290DF2093F7DC0041BAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		353B5667B219D97F146C4202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TracksitunesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60895CF874DCD720A8174B56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tracksitunes/Pods-Tracksitunes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tracksitunes/Pods-Tracksitunes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74C680A22DDC95E5A6B68071 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TracksitunesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2874D1E05E847ACCDA71309 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tracksitunes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A51290BE2093F7DA0041BAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A512912D20940AC70041BAF9 /* AppDelegate.swift in Sources */,
+				A512912820940AC70041BAF9 /* Track.swift in Sources */,
+				A512912C20940AC70041BAF9 /* TracksTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290D22093F7DC0041BAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51290DB2093F7DC0041BAF9 /* TracksitunesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51290DD2093F7DC0041BAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51290E62093F7DC0041BAF9 /* TracksitunesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A51290D82093F7DC0041BAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A51290C12093F7DA0041BAF9 /* Tracksitunes */;
+			targetProxy = A51290D72093F7DC0041BAF9 /* PBXContainerItemProxy */;
+		};
+		A51290E32093F7DC0041BAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A51290C12093F7DA0041BAF9 /* Tracksitunes */;
+			targetProxy = A51290E22093F7DC0041BAF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A512912120940AC70041BAF9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A512912220940AC70041BAF9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A512912320940AC70041BAF9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A512912420940AC70041BAF9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A51290E82093F7DC0041BAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A51290E92093F7DC0041BAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A51290EB2093F7DC0041BAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B3389B794C3E781AAB8B35F /* Pods-Tracksitunes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tracksitunes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Tracksitunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A51290EC2093F7DC0041BAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF957A77AB0C7417B5665269 /* Pods-Tracksitunes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tracksitunes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Tracksitunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A51290EE2093F7DC0041BAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711C224078F8F035E0E8F9D1 /* Pods-TracksitunesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TracksitunesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.TracksitunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracksitunes.app/Tracksitunes";
+			};
+			name = Debug;
+		};
+		A51290EF2093F7DC0041BAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E827A9A143A329F786D73AE /* Pods-TracksitunesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TracksitunesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.TracksitunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracksitunes.app/Tracksitunes";
+			};
+			name = Release;
+		};
+		A51290F12093F7DC0041BAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E28E04B1934FE3D853AD61 /* Pods-TracksitunesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TracksitunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.TracksitunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tracksitunes;
+			};
+			name = Debug;
+		};
+		A51290F22093F7DC0041BAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48884CFF718CE7ADA683187 /* Pods-TracksitunesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TracksitunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.TracksitunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tracksitunes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A51290BD2093F7DA0041BAF9 /* Build configuration list for PBXProject "Tracksitunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51290E82093F7DC0041BAF9 /* Debug */,
+				A51290E92093F7DC0041BAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51290EA2093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "Tracksitunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51290EB2093F7DC0041BAF9 /* Debug */,
+				A51290EC2093F7DC0041BAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51290ED2093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "TracksitunesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51290EE2093F7DC0041BAF9 /* Debug */,
+				A51290EF2093F7DC0041BAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51290F02093F7DC0041BAF9 /* Build configuration list for PBXNativeTarget "TracksitunesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51290F12093F7DC0041BAF9 /* Debug */,
+				A51290F22093F7DC0041BAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A51290BA2093F7DA0041BAF9 /* Project object */;
+}

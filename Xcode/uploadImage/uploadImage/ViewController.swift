@@ -1,0 +1,108 @@
+//
+//  ViewController.swift
+//  uploadImage
+//
+//  Created by d182_raul_j on 12/05/18.
+//  Copyright © 2018 d182_raul_j. All rights reserved.
+//
+
+import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var storageImage = UIImage()
+    var ref: DatabaseReference!
+    let uploadImage : UIButton = {
+        let b = UIButton()
+        b.setImage(#imageLiteral(resourceName: "Icon"), for: .normal)
+        
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
+        return b
+    }()
+    
+    let uploadButton : UIButton = {
+        let b = UIButton()
+        b.backgroundColor = UIColor.red
+        b.setTitle("Subir imagen", for: .normal)
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.addTarget(self, action: #selector(saveImage), for: .touchUpInside)
+        return b
+    }()
+    
+    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        /**************Boton con imagen**************/
+        view.backgroundColor = UIColor.white
+        view.addSubview(uploadImage)
+        view.addSubview(uploadButton)
+        view.addSubview(myActivityIndicator)
+        uploadImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        uploadImage.topAnchor.constraint(equalTo: view.topAnchor,constant: 100).isActive = true
+        uploadImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        uploadImage.widthAnchor.constraint(equalToConstant : 150).isActive = true
+        
+        /************Boton de subir****************/
+        uploadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        uploadButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        uploadButton.widthAnchor.constraint(equalToConstant : 300).isActive = true
+        uploadButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        myActivityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        myActivityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        myActivityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
+        
+        ref = Database.database().reference()
+        
+    }
+
+    
+    
+    @objc  func selectImage(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        self.present(picker,animated: true,completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let imagen = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            self.uploadImage.setImage(imagen, for: .normal)
+            storageImage = imagen
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @objc func saveImage(){
+        let id = ref.childByAutoId().key
+        self.myActivityIndicator.startAnimating()
+        let storage = Storage.storage().reference()
+        let nombreImagen = UUID()
+        let directorio = storage.child("imagenes/\(nombreImagen)")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"
+        //Metodo que sube la info hacia el storage
+        directorio.putData(UIImagePNGRepresentation(storageImage)!, metadata: metadata){
+            (data, error) in
+            if error != nil{
+                print(error?.localizedDescription)
+                return
+            }
+            print("Se subio la imagen")
+            self.myActivityIndicator.stopAnimating()
+        }
+        
+        let values = ["nombre": String(describing: directorio)]
+        ref.child("imagenes").child(id).setValue(values)
+        
+    }
+
+}
+

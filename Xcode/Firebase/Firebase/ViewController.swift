@@ -169,9 +169,14 @@ class ViewController: UIViewController {
                     
                     let values = ["name": email]
                     
-                    self.ref.updateChildValues(values, withCompletionBlock: { (error, ref) in
-                        
-                        
+                    guard let uid = user?.uid else{
+                        return
+                    }
+                    //y entonces creamos una llave por usuario para que sean unicos
+                    
+                    let usersReference = self.ref.child("users").child(uid)
+                    
+                    usersReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
                         if error != nil{
                             print("Error al insertar datos")
                             return
@@ -179,6 +184,11 @@ class ViewController: UIViewController {
                             print("Dato guardado en la BD")
                         }
                     })
+                    
+                    let login = LoginViewController()
+                    //Con esto no tenemos el boton de alir ya que no esta con el navigation controler
+                    //self.present(login, animated: true,completion: nil)
+                    self.navigationController?.pushViewController(login, animated: true)
                 }else{
                     if let error = error?.localizedDescription{
                         print("Error al crear usuario por firebase", error)

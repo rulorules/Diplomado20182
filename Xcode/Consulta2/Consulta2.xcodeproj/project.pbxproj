@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A51C659020C1E2B9004CB0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C658F20C1E2B9004CB0DA /* AppDelegate.swift */; };
+		A51C659220C1E2B9004CB0DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C659120C1E2B9004CB0DA /* ViewController.swift */; };
+		A51C659520C1E2B9004CB0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51C659320C1E2B9004CB0DA /* Main.storyboard */; };
+		A51C659720C1E2BA004CB0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51C659620C1E2BA004CB0DA /* Assets.xcassets */; };
+		A51C659A20C1E2BA004CB0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51C659820C1E2BA004CB0DA /* LaunchScreen.storyboard */; };
+		A51C65A520C1E2BB004CB0DA /* Consulta2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C65A420C1E2BB004CB0DA /* Consulta2Tests.swift */; };
+		A51C65B020C1E2BB004CB0DA /* Consulta2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51C65AF20C1E2BB004CB0DA /* Consulta2UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A51C65A120C1E2BB004CB0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A51C658420C1E2B9004CB0DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A51C658B20C1E2B9004CB0DA;
+			remoteInfo = Consulta2;
+		};
+		A51C65AC20C1E2BB004CB0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A51C658420C1E2B9004CB0DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A51C658B20C1E2B9004CB0DA;
+			remoteInfo = Consulta2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A51C658C20C1E2B9004CB0DA /* Consulta2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consulta2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51C658F20C1E2B9004CB0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A51C659120C1E2B9004CB0DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A51C659420C1E2B9004CB0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A51C659620C1E2BA004CB0DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A51C659920C1E2BA004CB0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A51C659B20C1E2BA004CB0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51C65A020C1E2BB004CB0DA /* Consulta2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Consulta2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51C65A420C1E2BB004CB0DA /* Consulta2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consulta2Tests.swift; sourceTree = "<group>"; };
+		A51C65A620C1E2BB004CB0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51C65AB20C1E2BB004CB0DA /* Consulta2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Consulta2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51C65AF20C1E2BB004CB0DA /* Consulta2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consulta2UITests.swift; sourceTree = "<group>"; };
+		A51C65B120C1E2BB004CB0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A51C658920C1E2B9004CB0DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C659D20C1E2BB004CB0DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C65A820C1E2BB004CB0DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A51C658320C1E2B9004CB0DA = {
+			isa = PBXGroup;
+			children = (
+				A51C658E20C1E2B9004CB0DA /* Consulta2 */,
+				A51C65A320C1E2BB004CB0DA /* Consulta2Tests */,
+				A51C65AE20C1E2BB004CB0DA /* Consulta2UITests */,
+				A51C658D20C1E2B9004CB0DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A51C658D20C1E2B9004CB0DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A51C658C20C1E2B9004CB0DA /* Consulta2.app */,
+				A51C65A020C1E2BB004CB0DA /* Consulta2Tests.xctest */,
+				A51C65AB20C1E2BB004CB0DA /* Consulta2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A51C658E20C1E2B9004CB0DA /* Consulta2 */ = {
+			isa = PBXGroup;
+			children = (
+				A51C658F20C1E2B9004CB0DA /* AppDelegate.swift */,
+				A51C659120C1E2B9004CB0DA /* ViewController.swift */,
+				A51C659320C1E2B9004CB0DA /* Main.storyboard */,
+				A51C659620C1E2BA004CB0DA /* Assets.xcassets */,
+				A51C659820C1E2BA004CB0DA /* LaunchScreen.storyboard */,
+				A51C659B20C1E2BA004CB0DA /* Info.plist */,
+			);
+			path = Consulta2;
+			sourceTree = "<group>";
+		};
+		A51C65A320C1E2BB004CB0DA /* Consulta2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A51C65A420C1E2BB004CB0DA /* Consulta2Tests.swift */,
+				A51C65A620C1E2BB004CB0DA /* Info.plist */,
+			);
+			path = Consulta2Tests;
+			sourceTree = "<group>";
+		};
+		A51C65AE20C1E2BB004CB0DA /* Consulta2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A51C65AF20C1E2BB004CB0DA /* Consulta2UITests.swift */,
+				A51C65B120C1E2BB004CB0DA /* Info.plist */,
+			);
+			path = Consulta2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A51C658B20C1E2B9004CB0DA /* Consulta2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51C65B420C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2" */;
+			buildPhases = (
+				A51C658820C1E2B9004CB0DA /* Sources */,
+				A51C658920C1E2B9004CB0DA /* Frameworks */,
+				A51C658A20C1E2B9004CB0DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Consulta2;
+			productName = Consulta2;
+			productReference = A51C658C20C1E2B9004CB0DA /* Consulta2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A51C659F20C1E2BB004CB0DA /* Consulta2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51C65B720C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2Tests" */;
+			buildPhases = (
+				A51C659C20C1E2BB004CB0DA /* Sources */,
+				A51C659D20C1E2BB004CB0DA /* Frameworks */,
+				A51C659E20C1E2BB004CB0DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A51C65A220C1E2BB004CB0DA /* PBXTargetDependency */,
+			);
+			name = Consulta2Tests;
+			productName = Consulta2Tests;
+			productReference = A51C65A020C1E2BB004CB0DA /* Consulta2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A51C65AA20C1E2BB004CB0DA /* Consulta2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51C65BA20C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2UITests" */;
+			buildPhases = (
+				A51C65A720C1E2BB004CB0DA /* Sources */,
+				A51C65A820C1E2BB004CB0DA /* Frameworks */,
+				A51C65A920C1E2BB004CB0DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A51C65AD20C1E2BB004CB0DA /* PBXTargetDependency */,
+			);
+			name = Consulta2UITests;
+			productName = Consulta2UITests;
+			productReference = A51C65AB20C1E2BB004CB0DA /* Consulta2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A51C658420C1E2B9004CB0DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = d182_raul_j;
+				TargetAttributes = {
+					A51C658B20C1E2B9004CB0DA = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					A51C659F20C1E2BB004CB0DA = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = A51C658B20C1E2B9004CB0DA;
+					};
+					A51C65AA20C1E2BB004CB0DA = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = A51C658B20C1E2B9004CB0DA;
+					};
+				};
+			};
+			buildConfigurationList = A51C658720C1E2B9004CB0DA /* Build configuration list for PBXProject "Consulta2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A51C658320C1E2B9004CB0DA;
+			productRefGroup = A51C658D20C1E2B9004CB0DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A51C658B20C1E2B9004CB0DA /* Consulta2 */,
+				A51C659F20C1E2BB004CB0DA /* Consulta2Tests */,
+				A51C65AA20C1E2BB004CB0DA /* Consulta2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A51C658A20C1E2B9004CB0DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51C659A20C1E2BA004CB0DA /* LaunchScreen.storyboard in Resources */,
+				A51C659720C1E2BA004CB0DA /* Assets.xcassets in Resources */,
+				A51C659520C1E2B9004CB0DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C659E20C1E2BB004CB0DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C65A920C1E2BB004CB0DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A51C658820C1E2B9004CB0DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51C659220C1E2B9004CB0DA /* ViewController.swift in Sources */,
+				A51C659020C1E2B9004CB0DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C659C20C1E2BB004CB0DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51C65A520C1E2BB004CB0DA /* Consulta2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51C65A720C1E2BB004CB0DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51C65B020C1E2BB004CB0DA /* Consulta2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A51C65A220C1E2BB004CB0DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A51C658B20C1E2B9004CB0DA /* Consulta2 */;
+			targetProxy = A51C65A120C1E2BB004CB0DA /* PBXContainerItemProxy */;
+		};
+		A51C65AD20C1E2BB004CB0DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A51C658B20C1E2B9004CB0DA /* Consulta2 */;
+			targetProxy = A51C65AC20C1E2BB004CB0DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A51C659320C1E2B9004CB0DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A51C659420C1E2B9004CB0DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A51C659820C1E2BA004CB0DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A51C659920C1E2BA004CB0DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A51C65B220C1E2BB004CB0DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A51C65B320C1E2BB004CB0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A51C65B520C1E2BB004CB0DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A51C65B620C1E2BB004CB0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A51C65B820C1E2BB004CB0DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Consulta2.app/Consulta2";
+			};
+			name = Debug;
+		};
+		A51C65B920C1E2BB004CB0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Consulta2.app/Consulta2";
+			};
+			name = Release;
+		};
+		A51C65BB20C1E2BB004CB0DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Consulta2;
+			};
+			name = Debug;
+		};
+		A51C65BC20C1E2BB004CB0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Consulta2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Consulta2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Consulta2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A51C658720C1E2B9004CB0DA /* Build configuration list for PBXProject "Consulta2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51C65B220C1E2BB004CB0DA /* Debug */,
+				A51C65B320C1E2BB004CB0DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51C65B420C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51C65B520C1E2BB004CB0DA /* Debug */,
+				A51C65B620C1E2BB004CB0DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51C65B720C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51C65B820C1E2BB004CB0DA /* Debug */,
+				A51C65B920C1E2BB004CB0DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51C65BA20C1E2BB004CB0DA /* Build configuration list for PBXNativeTarget "Consulta2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51C65BB20C1E2BB004CB0DA /* Debug */,
+				A51C65BC20C1E2BB004CB0DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A51C658420C1E2B9004CB0DA /* Project object */;
+}

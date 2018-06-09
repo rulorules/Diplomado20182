@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.navigationItem.title = textField.text
+        //segue.destination.navigationItem.title = textField.text
     }
 }
 

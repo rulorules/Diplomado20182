@@ -28,7 +28,7 @@ class ImageStore {
         if let data = UIImageJPEGRepresentation(image, 0.5) {
             // Write it to full URL
             try? data.write(to: url, options: [.atomic])
-        }
+        } 
     }
     
     func image(forKey key: String) -> UIImage? {

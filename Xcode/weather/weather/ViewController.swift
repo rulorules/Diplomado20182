@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                         let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] //Diccionario con llave string y valor any, oir ejemplo, cadena, enetero,flotante, etc.
                         DispatchQueue.main.async { //Todo lo que ocurre aqui se ejecutara en el hilo principal
                             if let main = json!["main"] as! [String: Any]? {
-                                self.temperatureLabel.text = "\(main["temp"] as! Float)º C"
+                                self.temperatureLabel.text = "\(main["temp"] as! Double)º C"
                             }
                             self.locationLabel.text = json!["name"] as? String
                         }

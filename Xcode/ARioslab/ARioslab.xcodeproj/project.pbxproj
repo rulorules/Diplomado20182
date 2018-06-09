@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5AD94FD20CB393C00A3696D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD94FC20CB393C00A3696D /* AppDelegate.swift */; };
+		A5AD94FF20CB393C00A3696D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AD94FE20CB393C00A3696D /* art.scnassets */; };
+		A5AD950120CB393C00A3696D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD950020CB393C00A3696D /* ViewController.swift */; };
+		A5AD950420CB393C00A3696D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AD950220CB393C00A3696D /* Main.storyboard */; };
+		A5AD950620CB393D00A3696D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AD950520CB393D00A3696D /* Assets.xcassets */; };
+		A5AD950920CB393D00A3696D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AD950720CB393D00A3696D /* LaunchScreen.storyboard */; };
+		A5AD951420CB393D00A3696D /* ARioslabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD951320CB393D00A3696D /* ARioslabTests.swift */; };
+		A5AD951F20CB393D00A3696D /* ARioslabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD951E20CB393D00A3696D /* ARioslabUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5AD951020CB393D00A3696D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AD94F120CB393C00A3696D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AD94F820CB393C00A3696D;
+			remoteInfo = ARioslab;
+		};
+		A5AD951B20CB393D00A3696D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AD94F120CB393C00A3696D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AD94F820CB393C00A3696D;
+			remoteInfo = ARioslab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5AD94F920CB393C00A3696D /* ARioslab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARioslab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD94FC20CB393C00A3696D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5AD94FE20CB393C00A3696D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		A5AD950020CB393C00A3696D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5AD950320CB393C00A3696D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5AD950520CB393D00A3696D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5AD950820CB393D00A3696D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5AD950A20CB393D00A3696D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AD950F20CB393D00A3696D /* ARioslabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARioslabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD951320CB393D00A3696D /* ARioslabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARioslabTests.swift; sourceTree = "<group>"; };
+		A5AD951520CB393D00A3696D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AD951A20CB393D00A3696D /* ARioslabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARioslabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD951E20CB393D00A3696D /* ARioslabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARioslabUITests.swift; sourceTree = "<group>"; };
+		A5AD952020CB393D00A3696D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5AD94F620CB393C00A3696D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD950C20CB393D00A3696D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD951720CB393D00A3696D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5AD94F020CB393C00A3696D = {
+			isa = PBXGroup;
+			children = (
+				A5AD94FB20CB393C00A3696D /* ARioslab */,
+				A5AD951220CB393D00A3696D /* ARioslabTests */,
+				A5AD951D20CB393D00A3696D /* ARioslabUITests */,
+				A5AD94FA20CB393C00A3696D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5AD94FA20CB393C00A3696D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD94F920CB393C00A3696D /* ARioslab.app */,
+				A5AD950F20CB393D00A3696D /* ARioslabTests.xctest */,
+				A5AD951A20CB393D00A3696D /* ARioslabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5AD94FB20CB393C00A3696D /* ARioslab */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD94FC20CB393C00A3696D /* AppDelegate.swift */,
+				A5AD94FE20CB393C00A3696D /* art.scnassets */,
+				A5AD950020CB393C00A3696D /* ViewController.swift */,
+				A5AD950220CB393C00A3696D /* Main.storyboard */,
+				A5AD950520CB393D00A3696D /* Assets.xcassets */,
+				A5AD950720CB393D00A3696D /* LaunchScreen.storyboard */,
+				A5AD950A20CB393D00A3696D /* Info.plist */,
+			);
+			path = ARioslab;
+			sourceTree = "<group>";
+		};
+		A5AD951220CB393D00A3696D /* ARioslabTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD951320CB393D00A3696D /* ARioslabTests.swift */,
+				A5AD951520CB393D00A3696D /* Info.plist */,
+			);
+			path = ARioslabTests;
+			sourceTree = "<group>";
+		};
+		A5AD951D20CB393D00A3696D /* ARioslabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD951E20CB393D00A3696D /* ARioslabUITests.swift */,
+				A5AD952020CB393D00A3696D /* Info.plist */,
+			);
+			path = ARioslabUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5AD94F820CB393C00A3696D /* ARioslab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD952320CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslab" */;
+			buildPhases = (
+				A5AD94F520CB393C00A3696D /* Sources */,
+				A5AD94F620CB393C00A3696D /* Frameworks */,
+				A5AD94F720CB393C00A3696D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARioslab;
+			productName = ARioslab;
+			productReference = A5AD94F920CB393C00A3696D /* ARioslab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5AD950E20CB393D00A3696D /* ARioslabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD952620CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslabTests" */;
+			buildPhases = (
+				A5AD950B20CB393D00A3696D /* Sources */,
+				A5AD950C20CB393D00A3696D /* Frameworks */,
+				A5AD950D20CB393D00A3696D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5AD951120CB393D00A3696D /* PBXTargetDependency */,
+			);
+			name = ARioslabTests;
+			productName = ARioslabTests;
+			productReference = A5AD950F20CB393D00A3696D /* ARioslabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5AD951920CB393D00A3696D /* ARioslabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD952920CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslabUITests" */;
+			buildPhases = (
+				A5AD951620CB393D00A3696D /* Sources */,
+				A5AD951720CB393D00A3696D /* Frameworks */,
+				A5AD951820CB393D00A3696D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5AD951C20CB393D00A3696D /* PBXTargetDependency */,
+			);
+			name = ARioslabUITests;
+			productName = ARioslabUITests;
+			productReference = A5AD951A20CB393D00A3696D /* ARioslabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5AD94F120CB393C00A3696D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = d182_raul_j;
+				TargetAttributes = {
+					A5AD94F820CB393C00A3696D = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					A5AD950E20CB393D00A3696D = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A5AD94F820CB393C00A3696D;
+					};
+					A5AD951920CB393D00A3696D = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A5AD94F820CB393C00A3696D;
+					};
+				};
+			};
+			buildConfigurationList = A5AD94F420CB393C00A3696D /* Build configuration list for PBXProject "ARioslab" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5AD94F020CB393C00A3696D;
+			productRefGroup = A5AD94FA20CB393C00A3696D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5AD94F820CB393C00A3696D /* ARioslab */,
+				A5AD950E20CB393D00A3696D /* ARioslabTests */,
+				A5AD951920CB393D00A3696D /* ARioslabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5AD94F720CB393C00A3696D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD94FF20CB393C00A3696D /* art.scnassets in Resources */,
+				A5AD950920CB393D00A3696D /* LaunchScreen.storyboard in Resources */,
+				A5AD950620CB393D00A3696D /* Assets.xcassets in Resources */,
+				A5AD950420CB393C00A3696D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD950D20CB393D00A3696D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD951820CB393D00A3696D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5AD94F520CB393C00A3696D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD950120CB393C00A3696D /* ViewController.swift in Sources */,
+				A5AD94FD20CB393C00A3696D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD950B20CB393D00A3696D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD951420CB393D00A3696D /* ARioslabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD951620CB393D00A3696D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD951F20CB393D00A3696D /* ARioslabUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5AD951120CB393D00A3696D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AD94F820CB393C00A3696D /* ARioslab */;
+			targetProxy = A5AD951020CB393D00A3696D /* PBXContainerItemProxy */;
+		};
+		A5AD951C20CB393D00A3696D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AD94F820CB393C00A3696D /* ARioslab */;
+			targetProxy = A5AD951B20CB393D00A3696D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5AD950220CB393C00A3696D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AD950320CB393C00A3696D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5AD950720CB393D00A3696D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AD950820CB393D00A3696D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5AD952120CB393D00A3696D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5AD952220CB393D00A3696D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5AD952420CB393D00A3696D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5AD952520CB393D00A3696D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A5AD952720CB393D00A3696D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARioslab.app/ARioslab";
+			};
+			name = Debug;
+		};
+		A5AD952820CB393D00A3696D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARioslab.app/ARioslab";
+			};
+			name = Release;
+		};
+		A5AD952A20CB393D00A3696D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARioslab;
+			};
+			name = Debug;
+		};
+		A5AD952B20CB393D00A3696D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ARioslabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.ARioslabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARioslab;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5AD94F420CB393C00A3696D /* Build configuration list for PBXProject "ARioslab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD952120CB393D00A3696D /* Debug */,
+				A5AD952220CB393D00A3696D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5AD952320CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD952420CB393D00A3696D /* Debug */,
+				A5AD952520CB393D00A3696D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5AD952620CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD952720CB393D00A3696D /* Debug */,
+				A5AD952820CB393D00A3696D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5AD952920CB393D00A3696D /* Build configuration list for PBXNativeTarget "ARioslabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD952A20CB393D00A3696D /* Debug */,
+				A5AD952B20CB393D00A3696D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5AD94F120CB393C00A3696D /* Project object */;
+}

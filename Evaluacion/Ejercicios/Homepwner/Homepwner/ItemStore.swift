@@ -5,7 +5,7 @@
 import Foundation
 
 class ItemStore {
-    
+      
     var allItems: [Item] = []
     let itemArchiveURL: URL = {
         let documentsDirectories =

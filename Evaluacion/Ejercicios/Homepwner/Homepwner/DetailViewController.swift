@@ -6,7 +6,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate,
 UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
+     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!

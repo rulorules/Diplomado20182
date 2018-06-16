@@ -6,17 +6,10 @@
 //  Copyright © 2018 d182_raul_j. All rights reserved.
 //
 //Si la extension la haces al protocolo obligas a la clase a usarla
-
-
-//Buscar pizza
-//    View
-//    Controller
-//    Model
-//    Interface
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class ViewControllerLogReg: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +43,14 @@ class ViewController: UIViewController {
         btn.backgroundColor = UIColor(red: 195/255, green: 1/255, blue: 1/255, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.setTitle("Acceder", for: .normal)
+        btn.setTitle("Registro", for: .normal)
         
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         btn.layer.cornerRadius = 10
         btn.layer.masksToBounds = true
         
         
-        btn.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(loginRegister), for: .touchUpInside)
         
         return btn
     }()
@@ -80,12 +73,25 @@ class ViewController: UIViewController {
         return tf
     }()
     
+    
+    let formSegmentedControl : UISegmentedControl = {
+        let sg = UISegmentedControl(items: ["Acceder","Register"])
+        sg.translatesAutoresizingMaskIntoConstraints = false
+        sg.selectedSegmentIndex = 1
+        sg.tintColor = UIColor.white
+        
+        //Sensa en que botom hacemos el clic y segmentedChange cambia el texto del boton
+        sg.addTarget(self, action: #selector(segmentedChange), for: .valueChanged)
+        return sg
+    }()
 
+    
     func setupLayout(){
         view.addSubview(formContainerView)
         view.addSubview(registerButton)
         formContainerView.addSubview(emailTextField)
         formContainerView.addSubview(passwordTextField)
+        view.addSubview(formSegmentedControl)
         /**Contenedor*************/
         //Centrar la vista en x y en y
         formContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -116,12 +122,30 @@ class ViewController: UIViewController {
         passwordTextField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         /*************************/
         
+        /**form segmentado (dos botones)******/
+        formSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        formSegmentedControl.bottomAnchor.constraint(equalTo: formContainerView.topAnchor, constant: -15).isActive = true
+        formSegmentedControl.widthAnchor.constraint(equalTo: formContainerView.widthAnchor).isActive = true
+        formSegmentedControl.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        /*************************/
         
     }
     
+    @objc func segmentedChange(){
+        let title = formSegmentedControl.titleForSegment(at: formSegmentedControl.selectedSegmentIndex)
+        
+        registerButton.setTitle(title, for: .normal)
+    }
     
+    @objc func loginRegister(){
+        if formSegmentedControl.selectedSegmentIndex == 0{
+            loginUser()
+        }else{
+            registerUser()
+        }
+    }
     
-    @objc func loginUser(){
+    func loginUser(){
         
         let loginString = String(format: "%@:%@", "Prueba13", "Prueba13")
         let loginData = loginString.data(using: String.Encoding.utf8)!

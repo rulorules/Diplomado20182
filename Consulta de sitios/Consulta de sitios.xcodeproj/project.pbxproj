@@ -15,6 +15,10 @@
 		A50E391D204A1665008506ED /* Consulta_de_sitiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E391C204A1665008506ED /* Consulta_de_sitiosTests.swift */; };
 		A50E3928204A1665008506ED /* Consulta_de_sitiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E3927204A1665008506ED /* Consulta_de_sitiosUITests.swift */; };
 		A5141E9D20CC4D5E002CF224 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5141E9C20CC4D5E002CF224 /* TableViewController.swift */; };
+		A517260F20D56C770008AF09 /* ViewControllerLogReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517260E20D56C770008AF09 /* ViewControllerLogReg.swift */; };
+		A517261220D57A100008AF09 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A517261120D57A100008AF09 /* MapKit.framework */; };
+		A517261420D57BD70008AF09 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517261320D57BD70008AF09 /* MapViewController.swift */; };
+		A517261620D5923E0008AF09 /* BarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517261520D5923E0008AF09 /* BarAnnotation.swift */; };
 		A5E517482065E3EE0065B3E2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E517472065E3EE0065B3E2 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,10 @@
 		A50E3927204A1665008506ED /* Consulta_de_sitiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consulta_de_sitiosUITests.swift; sourceTree = "<group>"; };
 		A50E3929204A1665008506ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5141E9C20CC4D5E002CF224 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A517260E20D56C770008AF09 /* ViewControllerLogReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogReg.swift; sourceTree = "<group>"; };
+		A517261120D57A100008AF09 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A517261320D57BD70008AF09 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A517261520D5923E0008AF09 /* BarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarAnnotation.swift; path = ../../Xcode/HelloCoreLocation/HelloCoreLocation/BarAnnotation.swift; sourceTree = "<group>"; };
 		A5E517472065E3EE0065B3E2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A517261220D57A100008AF09 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				A50E391B204A1665008506ED /* Consulta de sitiosTests */,
 				A50E3926204A1665008506ED /* Consulta de sitiosUITests */,
 				A50E3905204A1665008506ED /* Products */,
+				A517261020D57A100008AF09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +113,10 @@
 			children = (
 				A50E3907204A1665008506ED /* AppDelegate.swift */,
 				A50E3909204A1665008506ED /* ViewController.swift */,
+				A517260E20D56C770008AF09 /* ViewControllerLogReg.swift */,
 				A5E517472065E3EE0065B3E2 /* MenuViewController.swift */,
+				A517261520D5923E0008AF09 /* BarAnnotation.swift */,
+				A517261320D57BD70008AF09 /* MapViewController.swift */,
 				A50E3910204A1665008506ED /* LaunchScreen.storyboard */,
 				A50E390B204A1665008506ED /* Main.storyboard */,
 				A50E390E204A1665008506ED /* Assets.xcassets */,
@@ -129,6 +142,14 @@
 				A50E3929204A1665008506ED /* Info.plist */,
 			);
 			path = "Consulta de sitiosUITests";
+			sourceTree = "<group>";
+		};
+		A517261020D57A100008AF09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A517261120D57A100008AF09 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50E390A204A1665008506ED /* ViewController.swift in Sources */,
+				A517261420D57BD70008AF09 /* MapViewController.swift in Sources */,
 				A5E517482065E3EE0065B3E2 /* MenuViewController.swift in Sources */,
+				A517260F20D56C770008AF09 /* ViewControllerLogReg.swift in Sources */,
 				A50E3908204A1665008506ED /* AppDelegate.swift in Sources */,
 				A5141E9D20CC4D5E002CF224 /* TableViewController.swift in Sources */,
+				A517261620D5923E0008AF09 /* BarAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

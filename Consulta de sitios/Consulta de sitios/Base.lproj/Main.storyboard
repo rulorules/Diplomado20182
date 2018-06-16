@@ -64,7 +64,6 @@
         <!--View Controller-->
         <scene sceneID="M8A-A2-b9i">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sI8-xY-rCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kv6-wu-cXd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzS-9Z-cEF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -73,6 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="COT-2v-ePn"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sI8-xY-rCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2150" y="-6"/>
         </scene>
@@ -91,20 +91,36 @@
             </objects>
             <point key="canvasLocation" x="2150" y="725"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="4xL-Qw-G4k">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-rk-aLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Mxf-vw-QXe" sceneMemberID="viewController">
+                <viewController id="Mxf-vw-QXe" customClass="MapViewController" customModule="Consulta_de_sitios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f80-pY-BPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xvF-hS-Hvm">
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-pA-Pux">
+                                <rect key="frame" x="16" y="87" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Kh-TV-piF"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="xvF-hS-Hvm" id="Jbd-Vs-i0m"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-rk-aLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2150" y="-759"/>
+            <point key="canvasLocation" x="2149.5999999999999" y="-759.67016491754134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l1I-5J-dqv">

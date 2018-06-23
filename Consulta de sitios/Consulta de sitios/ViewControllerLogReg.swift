@@ -154,7 +154,7 @@ class ViewControllerLogReg: UIViewController {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "apptelesitestest.azurewebsites.net"
-        components.path = "/login2"
+        components.path = "/login"
 
         var req = URLRequest(url: components.url!)
         req.httpMethod = "GET"
@@ -286,12 +286,12 @@ class ViewControllerLogReg: UIViewController {
                 let alert = UIAlertController(title: "¿Almacenar credenciales?", message: "¿Deseas guardar tus credenciales para iniciar sesión?", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Si", style: .default) { action in
                     debugPrint(action)
-                    self.performSegue(withIdentifier: "Menu", sender: nil)
+                    //self.performSegue(withIdentifier: "Menu", sender: nil)
                 }
                 
                 let cancelAction = UIAlertAction(title: "No", style: .destructive) { action in
                     debugPrint(action)
-                    self.performSegue(withIdentifier: "Menu", sender: nil)
+                    //self.performSegue(withIdentifier: "Menu", sender: nil)
                 }
 
                 alert.addAction(okAction)

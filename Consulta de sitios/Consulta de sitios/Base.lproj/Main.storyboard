@@ -109,6 +109,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldPrimaryActionTriggered:" destination="Mxf-vw-QXe" eventType="primaryActionTriggered" id="tqM-Ud-qsN"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="xvF-hS-Hvm" id="Jbd-Vs-i0m"/>
+                        <outlet property="textFieldConsulta" destination="tT1-pA-Pux" id="r4j-a3-vjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-rk-aLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

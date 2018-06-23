@@ -123,57 +123,76 @@ class ViewController: UIViewController {
     
     @objc func loginUser(){
         
-        let loginString = String(format: "%@:%@", "Prueba13", "Prueba13")
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString3 = loginData.base64EncodedString()
+        let email = emailTextField.text
+        let password = passwordTextField.text
         
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "apptelesitestest.azurewebsites.net"
-        components.path = "/login2"
-
-        var req = URLRequest(url: components.url!)
-        req.httpMethod = "GET"
-        //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
-        req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
-        req.setValue("2", forHTTPHeaderField: "AUTHMODE")
-
-        let session = URLSession.shared
-        let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
-            guard error == nil else {
-                print("ERROR: \(error!)")
-                return
-            }
-            guard let unwrappedData = data else {
-                print("Empty response")
-                return
-            }
+        if(email != "" && password != ""){
             
-            let resp = response as! HTTPURLResponse
-            if resp.statusCode == 200 {
-                print(unwrappedData)
-            } else {
-                print("Unsuccesful request: \(resp)")
-            }
-        })
-        task.resume()
-        performSegue(withIdentifier: "Opciones", sender: nil)
-        /*
-        if let email = emailTextField.text, let password = passwordTextField.text{
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if user != nil{
-                    print("Usuario autenticado")
-                    let lc = LoginViewController()
-                    self.navigationController?.pushViewController(lc, animated: true)
-                }else{
-                    if let error = error?.localizedDescription{
-                        print("Error al crear usuario por firebase", error)
-                    }else{
-                        print("Tu eres el error en sesion!!")
-                    }
+            let loginString = String(format: "%@:%@", "Prueba13", "Prueba13")
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString3 = loginData.base64EncodedString()
+            
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "apptelesitestest.azurewebsites.net"
+            components.path = "/login2"
+            
+            var req = URLRequest(url: components.url!)
+            req.httpMethod = "GET"
+            //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
+            req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
+            req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+                guard error == nil else {
+                    print("ERROR: \(error!)")
+                    return
                 }
+                guard let unwrappedData = data else {
+                    print("Empty response")
+                    return
+                }
+                let resp = response as! HTTPURLResponse
+                if resp.statusCode == 200 {
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                    print(unwrappedData)
+                } else {
+                    print("Unsuccesful request: \(resp)")
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                }
+            })
+            task.resume()
+            performSegue(withIdentifier: "Opciones", sender: nil)
+            /*
+             if let email = emailTextField.text, let password = passwordTextField.text{
+             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+             if user != nil{
+             print("Usuario autenticado")
+             let lc = LoginViewController()
+             self.navigationController?.pushViewController(lc, animated: true)
+             }else{
+             if let error = error?.localizedDescription{
+             print("Error al crear usuario por firebase", error)
+             }else{
+             print("Tu eres el error en sesion!!")
+             }
+             }
+             }
+             }*/
+        }else{
+            let alert = UIAlertController(title: "Datos incompletos", message: "Debes introducir el usuario y la contraseña", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { action in
+                debugPrint(action)
             }
-        }*/
+           
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
     }
     
     

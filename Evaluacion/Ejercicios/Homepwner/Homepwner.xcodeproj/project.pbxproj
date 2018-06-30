@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					6B64C0EE1B84C7C300288BE3 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 88BTHVR7TK;
 						LastSwiftMigration = 0800;
 					};
 					6B64C1021B84C7C300288BE3 = {
@@ -419,10 +420,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 88BTHVR7TK;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Homepwner;
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -432,10 +434,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 88BTHVR7TK;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Homepwner;
+				PRODUCT_BUNDLE_IDENTIFIER = rulo.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

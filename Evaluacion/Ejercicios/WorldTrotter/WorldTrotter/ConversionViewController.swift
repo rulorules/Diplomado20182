@@ -47,7 +47,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        //textField.resignFirstResponder()
+        textField.resignFirstResponder()
         //print("asdf")
     }
     

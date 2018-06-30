@@ -128,7 +128,7 @@ class ViewController: UIViewController {
         
         if(email != "" && password != ""){
             
-            //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+           
             let loginString = String(format: "%@:%@", "MANT\\" + email!, password!)
             let loginData = loginString.data(using: String.Encoding.utf8)!
             let base64LoginString3 = loginData.base64EncodedString()

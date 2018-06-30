@@ -31,7 +31,7 @@ class MenuViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Opcion", for: indexPath)
-        let opciones = ["Consulta de sitios", "Configuración", "Acerca de"]
+        let opciones = ["Consulta de sitios", "Configuración", "Acerca de","Sube tu "]
         //let user = users[indexPath.row]
         cell.textLabel?.text = opciones[indexPath.row]
         //cell.detailTextLabel?.text = user.email

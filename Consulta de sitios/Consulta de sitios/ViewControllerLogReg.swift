@@ -147,13 +147,13 @@ class ViewControllerLogReg: UIViewController {
     
     func loginUser(){
         
-        let loginString = String(format: "%@:%@", "Prueba13", "Prueba13")
+        let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "apptelesitestest.azurewebsites.net"
+        components.host = "apptelesitesprodu.azurewebsites.net"
         components.path = "/login"
 
         var req = URLRequest(url: components.url!)
@@ -164,18 +164,20 @@ class ViewControllerLogReg: UIViewController {
 
         let session = URLSession.shared
         let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+            let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+            print(resultado!)
             guard error == nil else {
                 print("ERROR: \(error!)")
                 return
             }
-            guard let unwrappedData = data else {
+            guard data != nil else {
                 print("Empty response")
                 return
             }
             
             let resp = response as! HTTPURLResponse
             if resp.statusCode == 200 {
-                print(unwrappedData)
+                print(resultado!)
             } else {
                 print("Unsuccesful request: \(resp)")
             }

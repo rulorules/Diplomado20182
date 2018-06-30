@@ -55,6 +55,7 @@
                         <segue destination="Mxf-vw-QXe" kind="show" identifier="Consulta" id="R1T-9j-CTH"/>
                         <segue destination="kv6-wu-cXd" kind="show" identifier="Configuracion" id="eGO-hK-y2T"/>
                         <segue destination="0je-fY-cJ2" kind="show" identifier="AcercaDe" id="D2o-6P-XOw"/>
+                        <segue destination="ics-2Q-g3k" kind="show" identifier="submit" id="tti-Ll-kYK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2H-zw-NVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,6 +126,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-rk-aLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149.5999999999999" y="-759.67016491754134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6AK-Wg-H9f">
+            <objects>
+                <viewController id="ics-2Q-g3k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N0a-f5-UvL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DfZ-nG-E20"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gf-9i-igR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="-1522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l1I-5J-dqv">

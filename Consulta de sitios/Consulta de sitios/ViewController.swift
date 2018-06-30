@@ -128,14 +128,15 @@ class ViewController: UIViewController {
         
         if(email != "" && password != ""){
             
-            let loginString = String(format: "%@:%@", "Prueba13", "Prueba13")
+            //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+            let loginString = String(format: "%@:%@", "MANT\\" + email!, password!)
             let loginData = loginString.data(using: String.Encoding.utf8)!
             let base64LoginString3 = loginData.base64EncodedString()
             
             var components = URLComponents()
             components.scheme = "https"
-            components.host = "apptelesitestest.azurewebsites.net"
-            components.path = "/login2"
+            components.host = "apptelesitesprodu.azurewebsites.net"
+            components.path = "/login"
             
             var req = URLRequest(url: components.url!)
             req.httpMethod = "GET"
@@ -145,25 +146,36 @@ class ViewController: UIViewController {
             
             let session = URLSession.shared
             let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+                let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+                print(resultado!)
                 guard error == nil else {
                     print("ERROR: \(error!)")
                     return
                 }
-                guard let unwrappedData = data else {
+                guard data != nil else {
                     print("Empty response")
                     return
                 }
                 let resp = response as! HTTPURLResponse
                 if resp.statusCode == 200 {
-                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
-                    print(unwrappedData)
+                    //      (withIdentifier: "Opciones", sender: nil)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "Opciones", sender: nil)
+                    }
                 } else {
                     print("Unsuccesful request: \(resp)")
-                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                    let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
+                    let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
+                        debugPrint(action)
+                    }
+                    
+                    alert2.addAction(okAction2)
+                    self.present(alert2, animated: true, completion: nil)
+                    
                 }
             })
             task.resume()
-            performSegue(withIdentifier: "Opciones", sender: nil)
+            //performSegue(withIdentifier: "Opciones", sender: nil)
             /*
              if let email = emailTextField.text, let password = passwordTextField.text{
              Auth.auth().signIn(withEmail: email, password: password) { (user, error) in

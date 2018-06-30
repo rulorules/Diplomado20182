@@ -35,8 +35,9 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBOutlet var textField: UITextField!
+    //@IBOutlet var textField: UITextField!
     
+    @IBOutlet weak var textField: UITextField!
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let number = numberFormatter.number(from: text) {

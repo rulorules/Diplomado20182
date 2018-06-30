@@ -1,0 +1,42 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 200,
+        "headers" : {
+          "Content-Type" : "application\/json; charset=utf-8",
+          "Etag" : "W\/\"16412a76f2140c6c1b7d8eea1f9b7b65\"",
+          "X-Request-Id" : "13c246eb-3f01-4ad3-bb3b-dde7a43897c7",
+          "Transfer-Encoding" : "Identity",
+          "Vary" : "Origin",
+          "X-Runtime" : "0.012365",
+          "Cache-Control" : "max-age=0, private, must-revalidate"
+        },
+        "body" : {
+          "email" : "douglas.adams@hitchhiker.com",
+          "id" : 42,
+          "updated_at" : "2018-03-30T06:48:18.191Z",
+          "name" : "Douglas Adams",
+          "role" : "admin",
+          "created_at" : "2018-03-29T02:06:44.122Z"
+        },
+        "url" : "http:\/\/localhost:3000\/users\/42"
+      },
+      "recorded_at" : 1522392498.2012439,
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application\/json"
+        },
+        "method" : "PUT",
+        "body" : {
+          "email" : "douglas.adams@hitchhiker.com",
+          "id" : 42,
+          "name" : "Douglas Adams",
+          "role" : "admin"
+        },
+        "url" : "http:\/\/localhost:3000\/users\/42"
+      }
+    }
+  ],
+  "name" : "update"
+}

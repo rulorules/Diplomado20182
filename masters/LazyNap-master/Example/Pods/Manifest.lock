@@ -1,0 +1,26 @@
+PODS:
+  - DVR (1.1.0)
+  - LazyNap (0.0.1)
+
+DEPENDENCIES:
+  - DVR (from `git@github.com:venmo/DVR.git`)
+  - LazyNap (from `../`)
+
+EXTERNAL SOURCES:
+  DVR:
+    :git: git@github.com:venmo/DVR.git
+  LazyNap:
+    :path: ../
+
+CHECKOUT OPTIONS:
+  DVR:
+    :commit: 242d694a1cd67aa1afd090ecd4260e36a5b6c8ab
+    :git: git@github.com:venmo/DVR.git
+
+SPEC CHECKSUMS:
+  DVR: 82d8cd9f32c26333c8f414998f33cd1f3ac549ac
+  LazyNap: 5a5d36b722b5e8a4abe3d90a0e66333b5f1a9b78
+
+PODFILE CHECKSUM: e78388e36fd71d8e098eaec84c0bff4a86109023
+
+COCOAPODS: 1.4.0

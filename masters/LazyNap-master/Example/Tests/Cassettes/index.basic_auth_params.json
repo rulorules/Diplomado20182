@@ -1,0 +1,480 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 200,
+        "headers" : {
+          "Content-Type" : "application\/json; charset=utf-8",
+          "Etag" : "W\/\"74f4db886e90eff045b7ce0acba34834\"",
+          "X-Request-Id" : "67481761-f181-438a-9ae2-f7ac54b67c1d",
+          "Transfer-Encoding" : "Identity",
+          "Vary" : "Origin",
+          "X-Runtime" : "0.015920",
+          "Cache-Control" : "max-age=0, private, must-revalidate"
+        },
+        "body" : [
+          {
+            "id" : 1,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.967Z",
+            "email" : "joe.doe1@example.com",
+            "updated_at" : "2018-03-31T05:28:10.733Z",
+            "token" : "ecd22997bdd54143b5097874713ddf45",
+            "name" : "Joe Doe 1"
+          },
+          {
+            "id" : 2,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.985Z",
+            "email" : "joe.doe2@example.com",
+            "updated_at" : "2018-03-31T05:28:10.737Z",
+            "token" : "2f6bd10181234345b1e2077f417a469c",
+            "name" : "Joe Doe 2"
+          },
+          {
+            "id" : 3,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.988Z",
+            "email" : "joe.doe3@example.com",
+            "updated_at" : "2018-03-31T05:28:10.740Z",
+            "token" : "5145809da5764cd5b4e0047b1a36da94",
+            "name" : "Joe Doe 3"
+          },
+          {
+            "id" : 4,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.991Z",
+            "email" : "joe.doe4@example.com",
+            "updated_at" : "2018-03-31T05:28:10.745Z",
+            "token" : "e18aa5bb92064d998243203ccf8ce88d",
+            "name" : "Joe Doe 4"
+          },
+          {
+            "id" : 5,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.994Z",
+            "email" : "joe.doe5@example.com",
+            "updated_at" : "2018-03-31T05:28:10.747Z",
+            "token" : "29bd1cb0f94840bdad01c7758b75471b",
+            "name" : "Joe Doe 5"
+          },
+          {
+            "id" : 6,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.997Z",
+            "email" : "joe.doe6@example.com",
+            "updated_at" : "2018-03-31T05:28:10.748Z",
+            "token" : "72bab61edf954befbf327cdf8c23ccd0",
+            "name" : "Joe Doe 6"
+          },
+          {
+            "id" : 7,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.000Z",
+            "email" : "joe.doe7@example.com",
+            "updated_at" : "2018-03-31T05:28:10.750Z",
+            "token" : "6a61f8b7b94b459e9ed603a16027eebf",
+            "name" : "Joe Doe 7"
+          },
+          {
+            "id" : 8,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.005Z",
+            "email" : "joe.doe8@example.com",
+            "updated_at" : "2018-03-31T05:28:10.751Z",
+            "token" : "5b1c8e5792d04a2d97263aa7e09e3c1a",
+            "name" : "Joe Doe 8"
+          },
+          {
+            "id" : 9,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.008Z",
+            "email" : "joe.doe9@example.com",
+            "updated_at" : "2018-03-31T05:28:10.755Z",
+            "token" : "bcdafab4d2de46f8b1fe71088299813f",
+            "name" : "Joe Doe 9"
+          },
+          {
+            "id" : 10,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.011Z",
+            "email" : "joe.doe10@example.com",
+            "updated_at" : "2018-03-31T05:28:10.760Z",
+            "token" : "a62ce0c6f50845dc8d02107343f3b803",
+            "name" : "Joe Doe 10"
+          },
+          {
+            "id" : 11,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.015Z",
+            "email" : "joe.doe11@example.com",
+            "updated_at" : "2018-03-31T05:28:10.763Z",
+            "token" : "cbf8370f2ff941e4b40898e1c5b0cc9b",
+            "name" : "Joe Doe 11"
+          },
+          {
+            "id" : 12,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.018Z",
+            "email" : "joe.doe12@example.com",
+            "updated_at" : "2018-03-31T05:28:10.765Z",
+            "token" : "d03b2c40e6cc4f928ad99dbfe389fe03",
+            "name" : "Joe Doe 12"
+          },
+          {
+            "id" : 13,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.021Z",
+            "email" : "joe.doe13@example.com",
+            "updated_at" : "2018-03-31T05:28:10.768Z",
+            "token" : "4e1abee9db0643f18712cb1b88fe2d03",
+            "name" : "Joe Doe 13"
+          },
+          {
+            "id" : 14,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.025Z",
+            "email" : "joe.doe14@example.com",
+            "updated_at" : "2018-03-31T05:28:10.770Z",
+            "token" : "dca3349d38f64090a82a78995b2343fb",
+            "name" : "Joe Doe 14"
+          },
+          {
+            "id" : 15,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.028Z",
+            "email" : "joe.doe15@example.com",
+            "updated_at" : "2018-03-31T05:28:10.773Z",
+            "token" : "af4a97495c9f41d3aa0dd32d12168a82",
+            "name" : "Joe Doe 15"
+          },
+          {
+            "id" : 16,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.032Z",
+            "email" : "joe.doe16@example.com",
+            "updated_at" : "2018-03-31T05:28:10.776Z",
+            "token" : "3821ef83efe74265b572d1a72aee9559",
+            "name" : "Joe Doe 16"
+          },
+          {
+            "id" : 17,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.037Z",
+            "email" : "joe.doe17@example.com",
+            "updated_at" : "2018-03-31T05:28:10.778Z",
+            "token" : "b3ea13502b8746cf840324d4ca772dba",
+            "name" : "Joe Doe 17"
+          },
+          {
+            "id" : 18,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.043Z",
+            "email" : "joe.doe18@example.com",
+            "updated_at" : "2018-03-31T05:28:10.781Z",
+            "token" : "424b3ebb0a93457aac390d693b8e7431",
+            "name" : "Joe Doe 18"
+          },
+          {
+            "id" : 19,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.047Z",
+            "email" : "joe.doe19@example.com",
+            "updated_at" : "2018-03-31T05:28:10.783Z",
+            "token" : "39c5ba07065f49979d51592d594b3332",
+            "name" : "Joe Doe 19"
+          },
+          {
+            "id" : 20,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.050Z",
+            "email" : "joe.doe20@example.com",
+            "updated_at" : "2018-03-31T05:28:10.786Z",
+            "token" : "661a0bd7845842c4a2c5108fa4683b30",
+            "name" : "Joe Doe 20"
+          },
+          {
+            "id" : 21,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.052Z",
+            "email" : "joe.doe21@example.com",
+            "updated_at" : "2018-03-31T05:28:10.789Z",
+            "token" : "190d1cfe67e04c1e84d26fac82e28201",
+            "name" : "Joe Doe 21"
+          },
+          {
+            "id" : 22,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.055Z",
+            "email" : "joe.doe22@example.com",
+            "updated_at" : "2018-03-31T05:28:10.794Z",
+            "token" : "8856ade62b8246fdb691ac786e9d64c7",
+            "name" : "Joe Doe 22"
+          },
+          {
+            "id" : 23,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.058Z",
+            "email" : "joe.doe23@example.com",
+            "updated_at" : "2018-03-31T05:28:10.798Z",
+            "token" : "3f5e6cca43264dc1a688cecefad75f45",
+            "name" : "Joe Doe 23"
+          },
+          {
+            "id" : 24,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.060Z",
+            "email" : "joe.doe24@example.com",
+            "updated_at" : "2018-03-31T05:28:10.801Z",
+            "token" : "f1eeea937f7c4453849f33ccf10a5f1e",
+            "name" : "Joe Doe 24"
+          },
+          {
+            "id" : 25,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.063Z",
+            "email" : "joe.doe25@example.com",
+            "updated_at" : "2018-03-31T05:28:10.805Z",
+            "token" : "b3decc7fe61f41169c9f3ef7624493e8",
+            "name" : "Joe Doe 25"
+          },
+          {
+            "id" : 26,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.066Z",
+            "email" : "joe.doe26@example.com",
+            "updated_at" : "2018-03-31T05:28:10.808Z",
+            "token" : "0ffdc3bb358243cfbe32a1c1f48624bc",
+            "name" : "Joe Doe 26"
+          },
+          {
+            "id" : 27,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.068Z",
+            "email" : "joe.doe27@example.com",
+            "updated_at" : "2018-03-31T05:28:10.816Z",
+            "token" : "4b9d6795256f43f6bac90c9a374e34d4",
+            "name" : "Joe Doe 27"
+          },
+          {
+            "id" : 28,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.071Z",
+            "email" : "joe.doe28@example.com",
+            "updated_at" : "2018-03-31T05:28:10.818Z",
+            "token" : "5e02a7a08ae34475b3aef54282a598dd",
+            "name" : "Joe Doe 28"
+          },
+          {
+            "id" : 29,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.075Z",
+            "email" : "joe.doe29@example.com",
+            "updated_at" : "2018-03-31T05:28:10.819Z",
+            "token" : "ff66c622a09345a2a8e54dc39ddcfe46",
+            "name" : "Joe Doe 29"
+          },
+          {
+            "id" : 30,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.079Z",
+            "email" : "joe.doe30@example.com",
+            "updated_at" : "2018-03-31T05:28:10.821Z",
+            "token" : "90d9ea823538466aa32ae94aa500ef96",
+            "name" : "Joe Doe 30"
+          },
+          {
+            "id" : 31,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.082Z",
+            "email" : "joe.doe31@example.com",
+            "updated_at" : "2018-03-31T05:28:10.822Z",
+            "token" : "6ebedbb196e04a7e9bf99f641d4595d1",
+            "name" : "Joe Doe 31"
+          },
+          {
+            "id" : 32,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.086Z",
+            "email" : "joe.doe32@example.com",
+            "updated_at" : "2018-03-31T05:28:10.824Z",
+            "token" : "6b1dd4e9ca68488db550c63db3ea3c7e",
+            "name" : "Joe Doe 32"
+          },
+          {
+            "id" : 33,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.089Z",
+            "email" : "joe.doe33@example.com",
+            "updated_at" : "2018-03-31T05:28:10.825Z",
+            "token" : "bfab7cbf8fad4c508b23070928b34bd0",
+            "name" : "Joe Doe 33"
+          },
+          {
+            "id" : 34,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.092Z",
+            "email" : "joe.doe34@example.com",
+            "updated_at" : "2018-03-31T05:28:10.827Z",
+            "token" : "a3f1b39699a9423698beb966bf446c5e",
+            "name" : "Joe Doe 34"
+          },
+          {
+            "id" : 35,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.096Z",
+            "email" : "joe.doe35@example.com",
+            "updated_at" : "2018-03-31T05:28:10.828Z",
+            "token" : "3679e219b1644385924ede766d2fa8f6",
+            "name" : "Joe Doe 35"
+          },
+          {
+            "id" : 36,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.100Z",
+            "email" : "joe.doe36@example.com",
+            "updated_at" : "2018-03-31T05:28:10.829Z",
+            "token" : "b38ef7c7bde8402f9b54294bd2dc5790",
+            "name" : "Joe Doe 36"
+          },
+          {
+            "id" : 37,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.104Z",
+            "email" : "joe.doe37@example.com",
+            "updated_at" : "2018-03-31T05:28:10.831Z",
+            "token" : "fb162db5438742c699746c72e5860da6",
+            "name" : "Joe Doe 37"
+          },
+          {
+            "id" : 38,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.109Z",
+            "email" : "joe.doe38@example.com",
+            "updated_at" : "2018-03-31T05:28:10.832Z",
+            "token" : "96f4269875914d389ceec209e861f9f2",
+            "name" : "Joe Doe 38"
+          },
+          {
+            "id" : 39,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.114Z",
+            "email" : "joe.doe39@example.com",
+            "updated_at" : "2018-03-31T05:28:10.834Z",
+            "token" : "e2f9b69649c4423e90ab3a68bff0e478",
+            "name" : "Joe Doe 39"
+          },
+          {
+            "id" : 40,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.117Z",
+            "email" : "joe.doe40@example.com",
+            "updated_at" : "2018-03-31T05:28:10.835Z",
+            "token" : "5254b390d62e423b9b5cca80fb0c6f00",
+            "name" : "Joe Doe 40"
+          },
+          {
+            "id" : 41,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.119Z",
+            "email" : "joe.doe41@example.com",
+            "updated_at" : "2018-03-31T05:28:10.836Z",
+            "token" : "3efa0ba5b466404593e22f36156242ec",
+            "name" : "Joe Doe 41"
+          },
+          {
+            "id" : 42,
+            "role" : "admin",
+            "created_at" : "2018-03-29T02:06:44.122Z",
+            "email" : "douglas.adams@hitchhiker.com",
+            "updated_at" : "2018-03-31T05:28:10.837Z",
+            "token" : "c56c890d708f4689bb9f2e298cadd316",
+            "name" : "Douglas Adams"
+          },
+          {
+            "id" : 43,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.128Z",
+            "email" : "joe.doe43@example.com",
+            "updated_at" : "2018-03-31T05:28:10.838Z",
+            "token" : "fbf58f18829840d388ffeea2c23feb8e",
+            "name" : "Joe Doe 43"
+          },
+          {
+            "id" : 44,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.131Z",
+            "email" : "joe.doe44@example.com",
+            "updated_at" : "2018-03-31T05:28:10.839Z",
+            "token" : "174d6070a75a4aa182a4b6c4198713d7",
+            "name" : "Joe Doe 44"
+          },
+          {
+            "id" : 45,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.134Z",
+            "email" : "joe.doe45@example.com",
+            "updated_at" : "2018-03-31T05:28:10.840Z",
+            "token" : "e269c980db2249d394c5aa11e5447045",
+            "name" : "Joe Doe 45"
+          },
+          {
+            "id" : 46,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.137Z",
+            "email" : "joe.doe46@example.com",
+            "updated_at" : "2018-03-31T05:28:10.842Z",
+            "token" : "8def0d44a80f4d2199d6724743923108",
+            "name" : "Joe Doe 46"
+          },
+          {
+            "id" : 47,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.139Z",
+            "email" : "joe.doe47@example.com",
+            "updated_at" : "2018-03-31T05:28:10.843Z",
+            "token" : "ad6cd5036053447ba467fc726d7e7f03",
+            "name" : "Joe Doe 47"
+          },
+          {
+            "id" : 48,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.142Z",
+            "email" : "joe.doe48@example.com",
+            "updated_at" : "2018-03-31T05:28:10.844Z",
+            "token" : "76520ac9daaa457aa1e83acbb6305ee6",
+            "name" : "Joe Doe 48"
+          },
+          {
+            "id" : 49,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.145Z",
+            "email" : "joe.doe49@example.com",
+            "updated_at" : "2018-03-31T05:28:10.845Z",
+            "token" : "b8d7fec9f7eb472da06a69f22a168f8a",
+            "name" : "Joe Doe 49"
+          },
+          {
+            "id" : 50,
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.148Z",
+            "email" : "joe.doe50@example.com",
+            "updated_at" : "2018-03-31T05:28:10.846Z",
+            "token" : "fef3bdf0666f40fca2cf07ad523d9cc9",
+            "name" : "Joe Doe 50"
+          }
+        ],
+        "url" : "http:\/\/localhost:3000\/users?token=dd9cfeb82e3e47ce8be36baf52f6a5a5"
+      },
+      "recorded_at" : 1522719052.7653511,
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application\/json"
+        },
+        "method" : "GET",
+        "url" : "http:\/\/localhost:3000\/users?token=dd9cfeb82e3e47ce8be36baf52f6a5a5"
+      }
+    }
+  ],
+  "name" : "index.basic_auth_params"
+}

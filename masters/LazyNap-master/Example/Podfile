@@ -1,0 +1,5 @@
+use_frameworks!
+target 'LazyNap_Tests' do
+    pod 'LazyNap', path: '../'
+    pod 'DVR', git: 'git@github.com:venmo/DVR.git'
+end

@@ -1,0 +1,26 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 204,
+        "headers" : {
+          "X-Request-Id" : "5c8659ee-9e4b-4578-ad1e-15cca7bec683",
+          "Vary" : "Origin",
+          "X-Runtime" : "0.005641",
+          "Cache-Control" : "no-cache"
+        },
+        "body" : "",
+        "url" : "http:\/\/localhost:3000\/users\/420"
+      },
+      "recorded_at" : 1522391775.6808009,
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application\/json"
+        },
+        "method" : "DELETE",
+        "url" : "http:\/\/localhost:3000\/users\/420"
+      }
+    }
+  ],
+  "name" : "delete"
+}

@@ -1,0 +1,31 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 401,
+        "headers" : {
+          "X-Request-Id" : "59404d5d-8295-43ae-855f-9ca07b0131c2",
+          "Content-Type" : "application\/json; charset=utf-8",
+          "Transfer-Encoding" : "Identity",
+          "Vary" : "Origin",
+          "X-Runtime" : "0.003310",
+          "Cache-Control" : "no-cache"
+        },
+        "body" : {
+          "error" : "Unauthorized Access"
+        },
+        "url" : "http:\/\/localhost:3000\/users"
+      },
+      "recorded_at" : 1522718030.60234,
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application\/json",
+          "Authorization" : "Basic invalid-token-123"
+        },
+        "method" : "GET",
+        "url" : "http:\/\/localhost:3000\/users"
+      }
+    }
+  ],
+  "name" : "index.basic_auth.401"
+}

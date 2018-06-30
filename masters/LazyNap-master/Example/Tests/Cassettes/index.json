@@ -1,0 +1,430 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 200,
+        "headers" : {
+          "Content-Type" : "application\/json; charset=utf-8",
+          "Etag" : "W\/\"285aa3493609e719693ec5c60a6ffc8c\"",
+          "X-Request-Id" : "caf6c6d0-03c1-4b19-81af-6eb977696ba6",
+          "Transfer-Encoding" : "Identity",
+          "Vary" : "Origin",
+          "X-Runtime" : "0.018057",
+          "Cache-Control" : "max-age=0, private, must-revalidate"
+        },
+        "body" : [
+          {
+            "email" : "joe.doe1@example.com",
+            "id" : 1,
+            "updated_at" : "2018-03-29T02:06:43.967Z",
+            "name" : "Joe Doe 1",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.967Z"
+          },
+          {
+            "email" : "joe.doe2@example.com",
+            "id" : 2,
+            "updated_at" : "2018-03-29T02:06:43.985Z",
+            "name" : "Joe Doe 2",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.985Z"
+          },
+          {
+            "email" : "joe.doe3@example.com",
+            "id" : 3,
+            "updated_at" : "2018-03-29T02:06:43.988Z",
+            "name" : "Joe Doe 3",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.988Z"
+          },
+          {
+            "email" : "joe.doe4@example.com",
+            "id" : 4,
+            "updated_at" : "2018-03-29T02:06:43.991Z",
+            "name" : "Joe Doe 4",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.991Z"
+          },
+          {
+            "email" : "joe.doe5@example.com",
+            "id" : 5,
+            "updated_at" : "2018-03-29T02:06:43.994Z",
+            "name" : "Joe Doe 5",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.994Z"
+          },
+          {
+            "email" : "joe.doe6@example.com",
+            "id" : 6,
+            "updated_at" : "2018-03-29T02:06:43.997Z",
+            "name" : "Joe Doe 6",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:43.997Z"
+          },
+          {
+            "email" : "joe.doe7@example.com",
+            "id" : 7,
+            "updated_at" : "2018-03-29T02:06:44.000Z",
+            "name" : "Joe Doe 7",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.000Z"
+          },
+          {
+            "email" : "joe.doe8@example.com",
+            "id" : 8,
+            "updated_at" : "2018-03-29T02:06:44.005Z",
+            "name" : "Joe Doe 8",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.005Z"
+          },
+          {
+            "email" : "joe.doe9@example.com",
+            "id" : 9,
+            "updated_at" : "2018-03-29T02:06:44.008Z",
+            "name" : "Joe Doe 9",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.008Z"
+          },
+          {
+            "email" : "joe.doe10@example.com",
+            "id" : 10,
+            "updated_at" : "2018-03-29T02:06:44.011Z",
+            "name" : "Joe Doe 10",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.011Z"
+          },
+          {
+            "email" : "joe.doe11@example.com",
+            "id" : 11,
+            "updated_at" : "2018-03-29T02:06:44.015Z",
+            "name" : "Joe Doe 11",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.015Z"
+          },
+          {
+            "email" : "joe.doe12@example.com",
+            "id" : 12,
+            "updated_at" : "2018-03-29T02:06:44.018Z",
+            "name" : "Joe Doe 12",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.018Z"
+          },
+          {
+            "email" : "joe.doe13@example.com",
+            "id" : 13,
+            "updated_at" : "2018-03-29T02:06:44.021Z",
+            "name" : "Joe Doe 13",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.021Z"
+          },
+          {
+            "email" : "joe.doe14@example.com",
+            "id" : 14,
+            "updated_at" : "2018-03-29T02:06:44.025Z",
+            "name" : "Joe Doe 14",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.025Z"
+          },
+          {
+            "email" : "joe.doe15@example.com",
+            "id" : 15,
+            "updated_at" : "2018-03-29T02:06:44.028Z",
+            "name" : "Joe Doe 15",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.028Z"
+          },
+          {
+            "email" : "joe.doe16@example.com",
+            "id" : 16,
+            "updated_at" : "2018-03-29T02:06:44.032Z",
+            "name" : "Joe Doe 16",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.032Z"
+          },
+          {
+            "email" : "joe.doe17@example.com",
+            "id" : 17,
+            "updated_at" : "2018-03-29T02:06:44.037Z",
+            "name" : "Joe Doe 17",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.037Z"
+          },
+          {
+            "email" : "joe.doe18@example.com",
+            "id" : 18,
+            "updated_at" : "2018-03-29T02:06:44.043Z",
+            "name" : "Joe Doe 18",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.043Z"
+          },
+          {
+            "email" : "joe.doe19@example.com",
+            "id" : 19,
+            "updated_at" : "2018-03-29T02:06:44.047Z",
+            "name" : "Joe Doe 19",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.047Z"
+          },
+          {
+            "email" : "joe.doe20@example.com",
+            "id" : 20,
+            "updated_at" : "2018-03-29T02:06:44.050Z",
+            "name" : "Joe Doe 20",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.050Z"
+          },
+          {
+            "email" : "joe.doe21@example.com",
+            "id" : 21,
+            "updated_at" : "2018-03-29T02:06:44.052Z",
+            "name" : "Joe Doe 21",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.052Z"
+          },
+          {
+            "email" : "joe.doe22@example.com",
+            "id" : 22,
+            "updated_at" : "2018-03-29T02:06:44.055Z",
+            "name" : "Joe Doe 22",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.055Z"
+          },
+          {
+            "email" : "joe.doe23@example.com",
+            "id" : 23,
+            "updated_at" : "2018-03-29T02:06:44.058Z",
+            "name" : "Joe Doe 23",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.058Z"
+          },
+          {
+            "email" : "joe.doe24@example.com",
+            "id" : 24,
+            "updated_at" : "2018-03-29T02:06:44.060Z",
+            "name" : "Joe Doe 24",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.060Z"
+          },
+          {
+            "email" : "joe.doe25@example.com",
+            "id" : 25,
+            "updated_at" : "2018-03-29T02:06:44.063Z",
+            "name" : "Joe Doe 25",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.063Z"
+          },
+          {
+            "email" : "joe.doe26@example.com",
+            "id" : 26,
+            "updated_at" : "2018-03-29T02:06:44.066Z",
+            "name" : "Joe Doe 26",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.066Z"
+          },
+          {
+            "email" : "joe.doe27@example.com",
+            "id" : 27,
+            "updated_at" : "2018-03-29T02:06:44.068Z",
+            "name" : "Joe Doe 27",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.068Z"
+          },
+          {
+            "email" : "joe.doe28@example.com",
+            "id" : 28,
+            "updated_at" : "2018-03-29T02:06:44.071Z",
+            "name" : "Joe Doe 28",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.071Z"
+          },
+          {
+            "email" : "joe.doe29@example.com",
+            "id" : 29,
+            "updated_at" : "2018-03-29T02:06:44.075Z",
+            "name" : "Joe Doe 29",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.075Z"
+          },
+          {
+            "email" : "joe.doe30@example.com",
+            "id" : 30,
+            "updated_at" : "2018-03-29T02:06:44.079Z",
+            "name" : "Joe Doe 30",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.079Z"
+          },
+          {
+            "email" : "joe.doe31@example.com",
+            "id" : 31,
+            "updated_at" : "2018-03-29T02:06:44.082Z",
+            "name" : "Joe Doe 31",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.082Z"
+          },
+          {
+            "email" : "joe.doe32@example.com",
+            "id" : 32,
+            "updated_at" : "2018-03-29T02:06:44.086Z",
+            "name" : "Joe Doe 32",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.086Z"
+          },
+          {
+            "email" : "joe.doe33@example.com",
+            "id" : 33,
+            "updated_at" : "2018-03-29T02:06:44.089Z",
+            "name" : "Joe Doe 33",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.089Z"
+          },
+          {
+            "email" : "joe.doe34@example.com",
+            "id" : 34,
+            "updated_at" : "2018-03-29T02:06:44.092Z",
+            "name" : "Joe Doe 34",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.092Z"
+          },
+          {
+            "email" : "joe.doe35@example.com",
+            "id" : 35,
+            "updated_at" : "2018-03-29T02:06:44.096Z",
+            "name" : "Joe Doe 35",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.096Z"
+          },
+          {
+            "email" : "joe.doe36@example.com",
+            "id" : 36,
+            "updated_at" : "2018-03-29T02:06:44.100Z",
+            "name" : "Joe Doe 36",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.100Z"
+          },
+          {
+            "email" : "joe.doe37@example.com",
+            "id" : 37,
+            "updated_at" : "2018-03-29T02:06:44.104Z",
+            "name" : "Joe Doe 37",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.104Z"
+          },
+          {
+            "email" : "joe.doe38@example.com",
+            "id" : 38,
+            "updated_at" : "2018-03-29T02:06:44.109Z",
+            "name" : "Joe Doe 38",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.109Z"
+          },
+          {
+            "email" : "joe.doe39@example.com",
+            "id" : 39,
+            "updated_at" : "2018-03-29T02:06:44.114Z",
+            "name" : "Joe Doe 39",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.114Z"
+          },
+          {
+            "email" : "joe.doe40@example.com",
+            "id" : 40,
+            "updated_at" : "2018-03-29T02:06:44.117Z",
+            "name" : "Joe Doe 40",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.117Z"
+          },
+          {
+            "email" : "joe.doe41@example.com",
+            "id" : 41,
+            "updated_at" : "2018-03-29T02:06:44.119Z",
+            "name" : "Joe Doe 41",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.119Z"
+          },
+          {
+            "email" : "joe.doe42@example.com",
+            "id" : 42,
+            "updated_at" : "2018-03-29T02:06:44.122Z",
+            "name" : "Joe Doe 42",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.122Z"
+          },
+          {
+            "email" : "joe.doe43@example.com",
+            "id" : 43,
+            "updated_at" : "2018-03-29T02:06:44.128Z",
+            "name" : "Joe Doe 43",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.128Z"
+          },
+          {
+            "email" : "joe.doe44@example.com",
+            "id" : 44,
+            "updated_at" : "2018-03-29T02:06:44.131Z",
+            "name" : "Joe Doe 44",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.131Z"
+          },
+          {
+            "email" : "joe.doe45@example.com",
+            "id" : 45,
+            "updated_at" : "2018-03-29T02:06:44.134Z",
+            "name" : "Joe Doe 45",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.134Z"
+          },
+          {
+            "email" : "joe.doe46@example.com",
+            "id" : 46,
+            "updated_at" : "2018-03-29T02:06:44.137Z",
+            "name" : "Joe Doe 46",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.137Z"
+          },
+          {
+            "email" : "joe.doe47@example.com",
+            "id" : 47,
+            "updated_at" : "2018-03-29T02:06:44.139Z",
+            "name" : "Joe Doe 47",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.139Z"
+          },
+          {
+            "email" : "joe.doe48@example.com",
+            "id" : 48,
+            "updated_at" : "2018-03-29T02:06:44.142Z",
+            "name" : "Joe Doe 48",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.142Z"
+          },
+          {
+            "email" : "joe.doe49@example.com",
+            "id" : 49,
+            "updated_at" : "2018-03-29T02:06:44.145Z",
+            "name" : "Joe Doe 49",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.145Z"
+          },
+          {
+            "email" : "joe.doe50@example.com",
+            "id" : 50,
+            "updated_at" : "2018-03-29T02:06:44.148Z",
+            "name" : "Joe Doe 50",
+            "role" : "user",
+            "created_at" : "2018-03-29T02:06:44.148Z"
+          }
+        ],
+        "url" : "http:\/\/localhost:3000\/users"
+      },
+      "recorded_at" : 1522390285.4342771,
+      "request" : {
+        "headers" : {
+          "Content-Type" : "application\/json"
+        },
+        "method" : "GET",
+        "url" : "http:\/\/localhost:3000\/users"
+      }
+    }
+  ],
+  "name" : "index"
+}

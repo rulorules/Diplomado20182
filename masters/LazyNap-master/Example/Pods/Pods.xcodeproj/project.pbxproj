@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		152E8C7787D8E697563784EEF116B9D8 /* NapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67670C54492C94B7B247FED7638B26AA /* NapConfig.swift */; };
+		1578F2D629E66224C7A31CF68090AB43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1DEC7AB357E8CAAFA590B249B8F952C0 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB86CE7A8845967762E7D5F075AC52E /* Identifiable.swift */; };
+		2DCACD248D499A44AF0D5289E92BA065 /* Pods-LazyNap_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A331702E3FC80827870C073699609D53 /* Pods-LazyNap_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30C8FD4E207320D600D4C76E /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C8FD4C20731DF400D4C76E /* RequestBuilder.swift */; };
+		4AEC4A728C081F2B6137E9AEF3703554 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D4B805210120E154E37FDB7D41615 /* SessionDataTask.swift */; };
+		4CD0778A76496533950E07BDDE09B35F /* DVR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDDF25F17797DE5B213F3D37E60F6F /* DVR-dummy.m */; };
+		538DE26BC0E5232B9F8BDD069FD3739D /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F1615A0142AAE9C3B876612361C010 /* HTTPURLResponse.swift */; };
+		6205FFD27B1D7925C308AC18ED493740 /* LazyNap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E78E8F2F81E37E2A7178241360E775A /* LazyNap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BF4CCE361FD94D03656CD2D35728449 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB9FB8CA854C7B00D1F4CE3B1C06C6 /* Session.swift */; };
+		8795A896593834BB8A1D7F262715E1BC /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802D196B39BD54999C940715C4E057AD /* Authentication.swift */; };
+		8D1985E53B13CC7E705E5E060AA37242 /* URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0C49740D2396D71D8CB83723F3174 /* URLResponse.swift */; };
+		95C0E309B7A97FF931D6F22B7BCD9B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9C3687B6C589721F3CC78042D5C6DEEC /* SessionUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D52DC161BE37ED162EB3A14F12009F /* SessionUploadTask.swift */; };
+		A028A448E05111AC6F52BD0EE77A0F42 /* NapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B36A05A1509C3435CA8889E52CE2 /* NapService.swift */; };
+		A73121E4969B084CB93906968CFF90EE /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5FC7490917C27EF310D51D15B3A3D /* Interaction.swift */; };
+		A9672C25D6B69C09D5D4B6722AA084D5 /* Cassette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812E387D94D1FF4D778A5534D16BAF /* Cassette.swift */; };
+		ACD9FAA4556D19DFF9986DB19FAF8D56 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FEEEC88846DC842861151F857676C5 /* URLRequest.swift */; };
+		AE6E14EDB640A935623B425D31FEAD0E /* SessionDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F810C41A4C460D9FA97A51C9F0796EC4 /* SessionDownloadTask.swift */; };
+		C89BB3BE14FBC3BFF727422DED0A5649 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE06142885C946B8FDB0DC5CB8786C /* ResponseHandler.swift */; };
+		C8CB7DC071BC0856A9140FF5746FE986 /* DVR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5340D7E4513515F549FBC395AF5D56F8 /* DVR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCB286EA324F2008F9F95D2BFF9B575B /* LazyNap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC6937DB632F4C2FEBB79445C6E987 /* LazyNap-dummy.m */; };
+		D97A2AD4B5C09C55093154E85181442E /* Pods-LazyNap_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B342534A9B8D4CB1E59A881B5E20F87C /* Pods-LazyNap_Tests-dummy.m */; };
+		DC435AC50FBB65BDA0015260EB08390A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44E4E238F603D2D2E629AC583804F4C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDDFFBC335D9711223D2C14772875557;
+			remoteInfo = DVR;
+		};
+		4ADA0DB23E5407914A6E898A0FFA755C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73495A5620E17AB59B9713FD35061902;
+			remoteInfo = LazyNap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0359149FFF796BAE0C77653D0A88F1A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		141CEF6DAF62EA3BA9801E9CA14E7626 /* Pods-LazyNap_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LazyNap_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		1CB86CE7A8845967762E7D5F075AC52E /* Identifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = LazyNap/Classes/Identifiable.swift; sourceTree = "<group>"; };
+		1E78E8F2F81E37E2A7178241360E775A /* LazyNap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LazyNap-umbrella.h"; sourceTree = "<group>"; };
+		20D52DC161BE37ED162EB3A14F12009F /* SessionUploadTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionUploadTask.swift; path = DVR/SessionUploadTask.swift; sourceTree = "<group>"; };
+		23EF1F4329293395C4CE095BE4928DBB /* DVR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DVR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDF6301484331BD0DBCB39C429D79C2 /* Pods-LazyNap_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LazyNap_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		30C8FD4C20731DF400D4C76E /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestBuilder.swift; path = LazyNap/Classes/RequestBuilder.swift; sourceTree = "<group>"; };
+		3B0A6E4151371AD85E3B3C933FD7724A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		412CBE190EAEF0B5D161677AE61912C2 /* DVR-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DVR-prefix.pch"; sourceTree = "<group>"; };
+		50266EB9C5C9CC39E4EFB47CA876B74D /* Pods-LazyNap_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LazyNap_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5340D7E4513515F549FBC395AF5D56F8 /* DVR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DVR-umbrella.h"; sourceTree = "<group>"; };
+		55F1615A0142AAE9C3B876612361C010 /* HTTPURLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPURLResponse.swift; path = DVR/HTTPURLResponse.swift; sourceTree = "<group>"; };
+		6139C19EA2CC660643628B7FCD978458 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67670C54492C94B7B247FED7638B26AA /* NapConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NapConfig.swift; path = LazyNap/Classes/NapConfig.swift; sourceTree = "<group>"; };
+		6A2AB5E1833130CCA491AD99813715E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AC3C9BA0D0B7BA93F5FB2ED0B9E9FE3 /* Pods_LazyNap_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyNap_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBE06142885C946B8FDB0DC5CB8786C /* ResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseHandler.swift; path = LazyNap/Classes/ResponseHandler.swift; sourceTree = "<group>"; };
+		802D196B39BD54999C940715C4E057AD /* Authentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = LazyNap/Classes/Authentication.swift; sourceTree = "<group>"; };
+		845CC9F9CAB5C8E6C6B1FF71B24128FC /* Pods-LazyNap_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LazyNap_Tests-resources.sh"; sourceTree = "<group>"; };
+		8F40B09396D8CEBF266520B80529C126 /* LazyNap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LazyNap.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CFC6937DB632F4C2FEBB79445C6E987 /* LazyNap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LazyNap-dummy.m"; sourceTree = "<group>"; };
+		9E3E988303A9D6DB08079CDF19ADEC85 /* LazyNap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LazyNap.modulemap; sourceTree = "<group>"; };
+		9EC0C49740D2396D71D8CB83723F3174 /* URLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLResponse.swift; path = DVR/URLResponse.swift; sourceTree = "<group>"; };
+		A331702E3FC80827870C073699609D53 /* Pods-LazyNap_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LazyNap_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A4470E430D138C70DCE5F45101BEF81A /* DVR.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DVR.xcconfig; sourceTree = "<group>"; };
+		AE5E5EB4A5B2BA9D18C7710558B0B87C /* LazyNap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LazyNap-prefix.pch"; sourceTree = "<group>"; };
+		B08BD2823D07A9543015E1CD2E899FCC /* LazyNap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyNap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B342534A9B8D4CB1E59A881B5E20F87C /* Pods-LazyNap_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LazyNap_Tests-dummy.m"; sourceTree = "<group>"; };
+		B4DDDF25F17797DE5B213F3D37E60F6F /* DVR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DVR-dummy.m"; sourceTree = "<group>"; };
+		C0DB9FB8CA854C7B00D1F4CE3B1C06C6 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = DVR/Session.swift; sourceTree = "<group>"; };
+		C286744593B4291CDC99198272CF6592 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FEEEC88846DC842861151F857676C5 /* URLRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = DVR/URLRequest.swift; sourceTree = "<group>"; };
+		CCC7B36A05A1509C3435CA8889E52CE2 /* NapService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NapService.swift; path = LazyNap/Classes/NapService.swift; sourceTree = "<group>"; };
+		CDBB292B16155FC07F7A9B47DFD8D1A1 /* Pods-LazyNap_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LazyNap_Tests.modulemap"; sourceTree = "<group>"; };
+		DB281F653538F989E9AB7E7E527EEBD5 /* Pods-LazyNap_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LazyNap_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF1D4B805210120E154E37FDB7D41615 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DVR/SessionDataTask.swift; sourceTree = "<group>"; };
+		EB49D3ECB114A43A2D72FD03CA5D990F /* LazyNap.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = LazyNap.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EC29A5C354D199DF8218D2A0C645AFBC /* Pods-LazyNap_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LazyNap_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F2C5FC7490917C27EF310D51D15B3A3D /* Interaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interaction.swift; path = DVR/Interaction.swift; sourceTree = "<group>"; };
+		F810C41A4C460D9FA97A51C9F0796EC4 /* SessionDownloadTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDownloadTask.swift; path = DVR/SessionDownloadTask.swift; sourceTree = "<group>"; };
+		F9812E387D94D1FF4D778A5534D16BAF /* Cassette.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cassette.swift; path = DVR/Cassette.swift; sourceTree = "<group>"; };
+		FC89E50F8D034708E681E40007E65B30 /* DVR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DVR.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		393A6479CF0183676517FAD9AB3C8FF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0E309B7A97FF931D6F22B7BCD9B25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4507867A1D591533C6C06EE54E6F4600 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC435AC50FBB65BDA0015260EB08390A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5008F87D46DEA85A9029DDADD36F902A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1578F2D629E66224C7A31CF68090AB43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33342BE29D1A002E7DF3B930AE35492D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBD3CB1045D26711B68849D71F01F20E /* LazyNap */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		409C75A67FA3F4B1828073269CFEF727 /* DVR */ = {
+			isa = PBXGroup;
+			children = (
+				F9812E387D94D1FF4D778A5534D16BAF /* Cassette.swift */,
+				55F1615A0142AAE9C3B876612361C010 /* HTTPURLResponse.swift */,
+				F2C5FC7490917C27EF310D51D15B3A3D /* Interaction.swift */,
+				C0DB9FB8CA854C7B00D1F4CE3B1C06C6 /* Session.swift */,
+				DF1D4B805210120E154E37FDB7D41615 /* SessionDataTask.swift */,
+				F810C41A4C460D9FA97A51C9F0796EC4 /* SessionDownloadTask.swift */,
+				20D52DC161BE37ED162EB3A14F12009F /* SessionUploadTask.swift */,
+				C3FEEEC88846DC842861151F857676C5 /* URLRequest.swift */,
+				9EC0C49740D2396D71D8CB83723F3174 /* URLResponse.swift */,
+				97008479145AEF949B0AA75C0EB75608 /* Support Files */,
+			);
+			path = DVR;
+			sourceTree = "<group>";
+		};
+		51A627C9BE9B2AA3ACF50D585DE7BD7B /* Pods-LazyNap_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6A2AB5E1833130CCA491AD99813715E3 /* Info.plist */,
+				CDBB292B16155FC07F7A9B47DFD8D1A1 /* Pods-LazyNap_Tests.modulemap */,
+				2CDF6301484331BD0DBCB39C429D79C2 /* Pods-LazyNap_Tests-acknowledgements.markdown */,
+				EC29A5C354D199DF8218D2A0C645AFBC /* Pods-LazyNap_Tests-acknowledgements.plist */,
+				B342534A9B8D4CB1E59A881B5E20F87C /* Pods-LazyNap_Tests-dummy.m */,
+				141CEF6DAF62EA3BA9801E9CA14E7626 /* Pods-LazyNap_Tests-frameworks.sh */,
+				845CC9F9CAB5C8E6C6B1FF71B24128FC /* Pods-LazyNap_Tests-resources.sh */,
+				A331702E3FC80827870C073699609D53 /* Pods-LazyNap_Tests-umbrella.h */,
+				DB281F653538F989E9AB7E7E527EEBD5 /* Pods-LazyNap_Tests.debug.xcconfig */,
+				50266EB9C5C9CC39E4EFB47CA876B74D /* Pods-LazyNap_Tests.release.xcconfig */,
+			);
+			name = "Pods-LazyNap_Tests";
+			path = "Target Support Files/Pods-LazyNap_Tests";
+			sourceTree = "<group>";
+		};
+		5F800575729804A8EBB1FEAC14FAE8F5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51A627C9BE9B2AA3ACF50D585DE7BD7B /* Pods-LazyNap_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70711F6BCCD35FEF305BA32B32631D6F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C286744593B4291CDC99198272CF6592 /* Info.plist */,
+				9E3E988303A9D6DB08079CDF19ADEC85 /* LazyNap.modulemap */,
+				8F40B09396D8CEBF266520B80529C126 /* LazyNap.xcconfig */,
+				9CFC6937DB632F4C2FEBB79445C6E987 /* LazyNap-dummy.m */,
+				AE5E5EB4A5B2BA9D18C7710558B0B87C /* LazyNap-prefix.pch */,
+				1E78E8F2F81E37E2A7178241360E775A /* LazyNap-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LazyNap";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				33342BE29D1A002E7DF3B930AE35492D /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				981F47320473B1FEEC8FA239F90694D5 /* Pods */,
+				D7AC2E345C4CF5F9F3E0F74D4C6F6602 /* Products */,
+				5F800575729804A8EBB1FEAC14FAE8F5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97008479145AEF949B0AA75C0EB75608 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC89E50F8D034708E681E40007E65B30 /* DVR.modulemap */,
+				A4470E430D138C70DCE5F45101BEF81A /* DVR.xcconfig */,
+				B4DDDF25F17797DE5B213F3D37E60F6F /* DVR-dummy.m */,
+				412CBE190EAEF0B5D161677AE61912C2 /* DVR-prefix.pch */,
+				5340D7E4513515F549FBC395AF5D56F8 /* DVR-umbrella.h */,
+				0359149FFF796BAE0C77653D0A88F1A9 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DVR";
+			sourceTree = "<group>";
+		};
+		981F47320473B1FEEC8FA239F90694D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				409C75A67FA3F4B1828073269CFEF727 /* DVR */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA676CCB43A3562A4BEC838BA0BA0D40 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EB49D3ECB114A43A2D72FD03CA5D990F /* LazyNap.podspec */,
+				3B0A6E4151371AD85E3B3C933FD7724A /* LICENSE */,
+				6139C19EA2CC660643628B7FCD978458 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D7AC2E345C4CF5F9F3E0F74D4C6F6602 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23EF1F4329293395C4CE095BE4928DBB /* DVR.framework */,
+				B08BD2823D07A9543015E1CD2E899FCC /* LazyNap.framework */,
+				6AC3C9BA0D0B7BA93F5FB2ED0B9E9FE3 /* Pods_LazyNap_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBD3CB1045D26711B68849D71F01F20E /* LazyNap */ = {
+			isa = PBXGroup;
+			children = (
+				802D196B39BD54999C940715C4E057AD /* Authentication.swift */,
+				1CB86CE7A8845967762E7D5F075AC52E /* Identifiable.swift */,
+				30C8FD4C20731DF400D4C76E /* RequestBuilder.swift */,
+				7CBE06142885C946B8FDB0DC5CB8786C /* ResponseHandler.swift */,
+				67670C54492C94B7B247FED7638B26AA /* NapConfig.swift */,
+				CCC7B36A05A1509C3435CA8889E52CE2 /* NapService.swift */,
+				AA676CCB43A3562A4BEC838BA0BA0D40 /* Pod */,
+				70711F6BCCD35FEF305BA32B32631D6F /* Support Files */,
+			);
+			name = LazyNap;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8E2AC4A87A1218D6C430ED246E63A7CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8CB7DC071BC0856A9140FF5746FE986 /* DVR-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7370066AF6B496DBFC3CC9139BDF003 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCACD248D499A44AF0D5289E92BA065 /* Pods-LazyNap_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2A286CC60E2E831DA6A987AD40C02B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6205FFD27B1D7925C308AC18ED493740 /* LazyNap-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73495A5620E17AB59B9713FD35061902 /* LazyNap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A7BB21EFD7FA7BB01A4E0F318A3DB87 /* Build configuration list for PBXNativeTarget "LazyNap" */;
+			buildPhases = (
+				0ABFC8FB9FDF21F62CE61FFF25A4D211 /* Sources */,
+				393A6479CF0183676517FAD9AB3C8FF8 /* Frameworks */,
+				FA2A286CC60E2E831DA6A987AD40C02B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyNap;
+			productName = LazyNap;
+			productReference = B08BD2823D07A9543015E1CD2E899FCC /* LazyNap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF93E94FC8CE8D521A2527143D3B2B6B /* Pods-LazyNap_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA642199F05F904A769A8D97DA4CF45 /* Build configuration list for PBXNativeTarget "Pods-LazyNap_Tests" */;
+			buildPhases = (
+				271DE1387979BCCEACCEC4E23CA8EC8D /* Sources */,
+				4507867A1D591533C6C06EE54E6F4600 /* Frameworks */,
+				E7370066AF6B496DBFC3CC9139BDF003 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35C940688F1FAFF82210009B7B9E0643 /* PBXTargetDependency */,
+				B2D40C714FADD6C4822804D8B09B4691 /* PBXTargetDependency */,
+			);
+			name = "Pods-LazyNap_Tests";
+			productName = "Pods-LazyNap_Tests";
+			productReference = 6AC3C9BA0D0B7BA93F5FB2ED0B9E9FE3 /* Pods_LazyNap_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDDFFBC335D9711223D2C14772875557 /* DVR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0291EC837BEFCF527210869846FEED4 /* Build configuration list for PBXNativeTarget "DVR" */;
+			buildPhases = (
+				225DF2A5267FD43BDA8C74173F4EDCBF /* Sources */,
+				5008F87D46DEA85A9029DDADD36F902A /* Frameworks */,
+				8E2AC4A87A1218D6C430ED246E63A7CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DVR;
+			productName = DVR;
+			productReference = 23EF1F4329293395C4CE095BE4928DBB /* DVR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D7AC2E345C4CF5F9F3E0F74D4C6F6602 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDDFFBC335D9711223D2C14772875557 /* DVR */,
+				73495A5620E17AB59B9713FD35061902 /* LazyNap */,
+				AF93E94FC8CE8D521A2527143D3B2B6B /* Pods-LazyNap_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ABFC8FB9FDF21F62CE61FFF25A4D211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C8FD4E207320D600D4C76E /* RequestBuilder.swift in Sources */,
+				8795A896593834BB8A1D7F262715E1BC /* Authentication.swift in Sources */,
+				152E8C7787D8E697563784EEF116B9D8 /* NapConfig.swift in Sources */,
+				1DEC7AB357E8CAAFA590B249B8F952C0 /* Identifiable.swift in Sources */,
+				CCB286EA324F2008F9F95D2BFF9B575B /* LazyNap-dummy.m in Sources */,
+				C89BB3BE14FBC3BFF727422DED0A5649 /* ResponseHandler.swift in Sources */,
+				A028A448E05111AC6F52BD0EE77A0F42 /* NapService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225DF2A5267FD43BDA8C74173F4EDCBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9672C25D6B69C09D5D4B6722AA084D5 /* Cassette.swift in Sources */,
+				4CD0778A76496533950E07BDDE09B35F /* DVR-dummy.m in Sources */,
+				538DE26BC0E5232B9F8BDD069FD3739D /* HTTPURLResponse.swift in Sources */,
+				A73121E4969B084CB93906968CFF90EE /* Interaction.swift in Sources */,
+				6BF4CCE361FD94D03656CD2D35728449 /* Session.swift in Sources */,
+				4AEC4A728C081F2B6137E9AEF3703554 /* SessionDataTask.swift in Sources */,
+				AE6E14EDB640A935623B425D31FEAD0E /* SessionDownloadTask.swift in Sources */,
+				9C3687B6C589721F3CC78042D5C6DEEC /* SessionUploadTask.swift in Sources */,
+				ACD9FAA4556D19DFF9986DB19FAF8D56 /* URLRequest.swift in Sources */,
+				8D1985E53B13CC7E705E5E060AA37242 /* URLResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271DE1387979BCCEACCEC4E23CA8EC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D97A2AD4B5C09C55093154E85181442E /* Pods-LazyNap_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35C940688F1FAFF82210009B7B9E0643 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DVR;
+			target = FDDFFBC335D9711223D2C14772875557 /* DVR */;
+			targetProxy = 44E4E238F603D2D2E629AC583804F4C7 /* PBXContainerItemProxy */;
+		};
+		B2D40C714FADD6C4822804D8B09B4691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LazyNap;
+			target = 73495A5620E17AB59B9713FD35061902 /* LazyNap */;
+			targetProxy = 4ADA0DB23E5407914A6E898A0FFA755C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		083ECC5EFE79B41222856EED8E034004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F40B09396D8CEBF266520B80529C126 /* LazyNap.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LazyNap/LazyNap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LazyNap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LazyNap/LazyNap.modulemap";
+				PRODUCT_NAME = LazyNap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		16A87F4B3A34AE58DD4BFF27F9040DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F40B09396D8CEBF266520B80529C126 /* LazyNap.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LazyNap/LazyNap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LazyNap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LazyNap/LazyNap.modulemap";
+				PRODUCT_NAME = LazyNap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29C4772F8119CE1225C1CCF1FE557498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4470E430D138C70DCE5F45101BEF81A /* DVR.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DVR/DVR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DVR/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DVR/DVR.modulemap";
+				PRODUCT_NAME = DVR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F278E77148C3ADB96BB0DA09210D2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB281F653538F989E9AB7E7E527EEBD5 /* Pods-LazyNap_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LazyNap_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LazyNap_Tests/Pods-LazyNap_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LazyNap_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		827269710C98D60C14D46BC6AF9BF728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		94AE7F69479BB07675A32BA5E442FABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4470E430D138C70DCE5F45101BEF81A /* DVR.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DVR/DVR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DVR/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DVR/DVR.modulemap";
+				PRODUCT_NAME = DVR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCAB7C0A9BCC2DFE4A74F8A737A36628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50266EB9C5C9CC39E4EFB47CA876B74D /* Pods-LazyNap_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LazyNap_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LazyNap_Tests/Pods-LazyNap_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LazyNap_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A7BB21EFD7FA7BB01A4E0F318A3DB87 /* Build configuration list for PBXNativeTarget "LazyNap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083ECC5EFE79B41222856EED8E034004 /* Debug */,
+				16A87F4B3A34AE58DD4BFF27F9040DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
+				827269710C98D60C14D46BC6AF9BF728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0291EC837BEFCF527210869846FEED4 /* Build configuration list for PBXNativeTarget "DVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C4772F8119CE1225C1CCF1FE557498 /* Debug */,
+				94AE7F69479BB07675A32BA5E442FABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA642199F05F904A769A8D97DA4CF45 /* Build configuration list for PBXNativeTarget "Pods-LazyNap_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F278E77148C3ADB96BB0DA09210D2E8 /* Debug */,
+				DCAB7C0A9BCC2DFE4A74F8A737A36628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

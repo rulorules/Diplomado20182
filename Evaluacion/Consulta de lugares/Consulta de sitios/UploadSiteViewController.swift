@@ -343,6 +343,8 @@ class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPick
                     alert2.addAction(okAction3)
                     self.present(alert2, animated: true, completion: nil)
                     print("sitio subido exitosamente")
+                    print(resultado!)
+                    
                     _ = self.navigationController?.popViewController(animated: true)
                 }
             } else {

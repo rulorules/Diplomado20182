@@ -33,7 +33,7 @@ class SelectCoordsMapViewController: UIViewController {
         let buttonItem = MKUserTrackingBarButtonItem(mapView: mapView)
         self.navigationItem.rightBarButtonItem = buttonItem
         
-        var uilgr = UILongPressGestureRecognizer(target: self, action: #selector(action))
+        let uilgr = UILongPressGestureRecognizer(target: self, action: #selector(action))
         uilgr.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(uilgr)
         
@@ -50,9 +50,9 @@ class SelectCoordsMapViewController: UIViewController {
         selectedLatitude = annotation.coordinate.latitude
         selectedLongitude = annotation.coordinate.longitude
         
-        var hola = [String(selectedLatitude),String(selectedLongitude)]
+        let coord = [String(selectedLatitude),String(selectedLongitude)]
         //self.delegate?.childViewControllerResponse(controller: SelectCoordsMapViewController)
-        delegate?.childViewControllerResponse(type: hola)
+        delegate?.childViewControllerResponse(type: coord)
         _ = navigationController?.popViewController(animated: true)
         
     }

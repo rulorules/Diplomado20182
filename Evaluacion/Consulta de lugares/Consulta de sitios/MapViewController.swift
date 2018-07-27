@@ -74,13 +74,16 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         
         //Petición web
         let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
+        //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
         var components = URLComponents()
         components.scheme = "https"
+        //components.host = "apptelesitesprodu.azurewebsites.net"
         components.host = "apptelesitestest.azurewebsites.net"
-        components.path = "/getArt/"+textFieldConsulta.text!
+        //components.path = "/getArt/"+textFieldConsulta.text!
+        components.path = "/coordsname/"+textFieldConsulta.text!
         
         var req = URLRequest(url: components.url!)
         req.httpMethod = "GET"
@@ -238,17 +241,69 @@ extension MapViewController: MKMapViewDelegate {
         return view
     }
     
+    
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
-        
         let location = view.annotation as! BarAnnotation
         
-        textView.text = location.title! + "\n\n\nCategoría: " + location.recid + "\n\nDescripción: " + "\n\nEtiquetas: "
-        UIView.animate(withDuration: 1, animations: {
-            let frame = self.view.frame
-            let yComponent = UIScreen.main.bounds.height - 400
-            self.bottomSheetVC.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
+        //Petición web
+        let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
+        //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString3 = loginData.base64EncodedString()
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        //components.host = "apptelesitesprodu.azurewebsites.net"
+        components.host = "apptelesitestest.azurewebsites.net"
+        //components.path = "/getArt/"+textFieldConsulta.text!
+        components.path = "/siteinfo/"+location.recid
+        
+        var req = URLRequest(url: components.url!)
+        req.httpMethod = "GET"
+        //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
+        req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
+        req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+            let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+            print(resultado!)
+            guard error == nil else {
+                print("ERROR: \(error!)")
+                return
+            }
+            guard data != nil else {
+                print("Empty response")
+                return
+            }
+            let resp = response as! HTTPURLResponse
+            if resp.statusCode == 200 {
+                
+                DispatchQueue.main.async {
+                    var cadena_sep = resultado!.components(separatedBy: "|")
+                    
+                    cadena_sep[0].remove(at: cadena_sep[0].startIndex)
+                    
+                    self.textView.text = cadena_sep[0] + "\n\n\nCategoría: " + cadena_sep[1] + "\n\nDescripción: " + cadena_sep[2] + "\n\nEtiquetas: " + cadena_sep[3]
+                    UIView.animate(withDuration: 1, animations: {
+                        let frame = self.view.frame
+                        let yComponent = UIScreen.main.bounds.height - 400
+                        self.bottomSheetVC.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
+                    })
+                    
+                }
+                
+                
+            } else {
+                print("Unsuccesful request: \(resp)")
+                //self.performSegue(withIdentifier: "Opciones", sender: nil)
+            }
         })
+        task.resume()
+        
+        
     }
     
     func mapViewWillStartLocatingUser(_ mapView: MKMapView){
@@ -259,6 +314,66 @@ extension MapViewController: MKMapViewDelegate {
         
         if(mode == MKUserTrackingMode.follow){
             print("que onda")
+            
+        
+            
+            //Petición web
+            let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
+            //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString3 = loginData.base64EncodedString()
+            
+            var components = URLComponents()
+            components.scheme = "https"
+            //components.host = "apptelesitesprodu.azurewebsites.net"
+            components.host = "apptelesitestest.azurewebsites.net"
+            //components.path = "/getArt/"+textFieldConsulta.text!
+            components.path = "/coords/"+String(locationManager.location!.coordinate.latitude)+","+String(locationManager.location!.coordinate.longitude)+"/"
+            
+            var req = URLRequest(url: components.url!)
+            req.httpMethod = "GET"
+            //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
+            req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
+            req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+                let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+                print(resultado!)
+                guard error == nil else {
+                    print("ERROR: \(error!)")
+                    return
+                }
+                guard data != nil else {
+                    print("Empty response")
+                    return
+                }
+                let resp = response as! HTTPURLResponse
+                if resp.statusCode == 200 {
+                    
+                    DispatchQueue.main.async {
+                        //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                        self.mapView.removeAnnotations(self.mapView.annotations)
+                        
+                        var cadena_sep = resultado!.components(separatedBy: "|")
+                        
+                        cadena_sep[0].remove(at: cadena_sep[0].startIndex)
+                        let sequence = stride(from: 0, to: cadena_sep.count - 1, by: 4)
+                        for element in sequence {
+                            self.addLocations(title: String(cadena_sep[element+2]), recid: cadena_sep[element+3], latitude: Double(cadena_sep[element])!, longitude: Double(cadena_sep[element+1])!)
+                            
+                        }
+                        self.hayPin = true
+                    }
+                    
+                    
+                } else {
+                    print("Unsuccesful request: \(resp)")
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                }
+            })
+            task.resume()
+            
         }
     }
     
@@ -345,7 +460,7 @@ extension MapViewController: CLLocationManagerDelegate{
         guard let lastLocation = locations.last else {return}
         let zoomToMapPoint = MKMapPointForCoordinate((lastLocation.coordinate))  // we know we have a coordinate, so we can use force unwrapping here
         let zoomToMapSize = MKMapSize(width: 10000, height: 10000)  // set a rectangle around the user's location
-        let zoomToMapRect = MKMapRect(origin: zoomToMapPoint, size: zoomToMapSize)
+        _ = MKMapRect(origin: zoomToMapPoint, size: zoomToMapSize)
         //mapView.setVisibleMapRect(zoomToMapRect, animated: true)
         
         // Do something with the location.
@@ -373,7 +488,6 @@ extension MapViewController: CLLocationManagerDelegate{
                                 self.calculatorY.append(y)
                                 self.calculatorZ.append(z)
                                 
-                                
 //                                print(String(self.calculatorX.max))
 //                                print(String(self.calculatorY.max))
 //                                print(String(self.calculatorZ.max))
@@ -381,7 +495,11 @@ extension MapViewController: CLLocationManagerDelegate{
 //                                print(String(self.calculatorX.min))
 //                                print(String(self.calculatorY.min))
 //                                print(String(self.calculatorZ.min))
-                                if(self.calculatorX.max > 3.0){
+                                if(self.calculatorX.max > 2.0){
+                                    let frame = self.view.frame
+                                    let yComponent = UIScreen.main.bounds.height
+                                    self.bottomSheetVC.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
+                                    
                                     if(self.hayPin){
                                         self.mapView.removeAnnotations(self.mapView.annotations)
                                         sleep(1)
@@ -395,9 +513,6 @@ extension MapViewController: CLLocationManagerDelegate{
                                         self.calculatorX.max = 0.0
                                     }
                                     print("supero")
-                                    
-                
-                                    
                                 }
                             }
         })

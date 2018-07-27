@@ -15,7 +15,7 @@ class MenuViewController: UITableViewController {
         navigationItem.hidesBackButton = true
         self.tableView.reloadData()
         
-       
+       navigationItem.hidesBackButton = true
         
         // Do any additional setup after loading the view.
     }

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     func addLocations(){
-        let yodaBar = BarAnnotation(title: "ILM", locationName: "ILM visitor", discipline: "Star Wars", coordinate: CLLocationCoordinate2D(latitude: 19.325925, longitude: -99.182669))
+        let yodaBar = BarAnnotation(title: "ILM", recid: "ILM visitor", coordinate: CLLocationCoordinate2D(latitude: 19.325925, longitude: -99.182669))
         mapView.addAnnotation(yodaBar)
     }
 }

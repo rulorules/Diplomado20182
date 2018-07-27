@@ -147,13 +147,13 @@ class ViewControllerLogReg: UIViewController {
     
     func loginUser(){
         
-        let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+        let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "apptelesitesprodu.azurewebsites.net"
+        components.host = "apptelesitestest.azurewebsites.net"
         components.path = "/login"
 
         var req = URLRequest(url: components.url!)

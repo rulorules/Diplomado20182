@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Consulta_de_sitios" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wOY-br-LQy">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="Empresa" id="n9P-PG-cFs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="telesites_logo" id="n9P-PG-cFs">
                             <inset key="largeContentSizeImageInsets" minX="200" minY="200" maxX="200" maxY="200"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
@@ -174,6 +174,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Empresa" width="100" height="16"/>
+        <image name="telesites_logo" width="100" height="16"/>
     </resources>
 </document>

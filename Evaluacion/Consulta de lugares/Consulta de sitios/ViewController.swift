@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         tf.placeholder = "Correo electrónico"
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
-        
+        tf.text = "Prueba14"
         return tf
     }()
     
@@ -77,6 +77,7 @@ class ViewController: UIViewController {
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = true
+        tf.text = "Prueba14"
         return tf
     }()
     
@@ -129,13 +130,13 @@ class ViewController: UIViewController {
         if(email != "" && password != ""){
             
            
-            let loginString = String(format: "%@:%@", "MANT\\" + email!, password!)
+            let loginString = String(format: "%@:%@", "ARREN\\" + email!, password!)
             let loginData = loginString.data(using: String.Encoding.utf8)!
             let base64LoginString3 = loginData.base64EncodedString()
             
             var components = URLComponents()
             components.scheme = "https"
-            components.host = "apptelesitesprodu.azurewebsites.net"
+            components.host = "apptelesitestest.azurewebsites.net"
             components.path = "/login"
             
             var req = URLRequest(url: components.url!)
@@ -174,11 +175,12 @@ class ViewController: UIViewController {
                     }
                 } else {
                     print("Unsuccesful request: \(resp)")
-                    DispatchQueue.main.async {
-                        let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
-                        let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
-                            debugPrint(action)
-                        }
+                        DispatchQueue.main.async {
+                            let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
+                            let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
+                                debugPrint(action)
+                                self.performSegue(withIdentifier: "Opciones", sender: nil)
+                            }
                         
                         alert2.addAction(okAction2)
                         self.present(alert2, animated: true, completion: nil)

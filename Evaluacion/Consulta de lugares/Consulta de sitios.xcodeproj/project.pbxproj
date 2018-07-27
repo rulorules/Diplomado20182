@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05F0AC2C210987C9008E456B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0AC2B210987C9008E456B /* BottomSheetViewController.swift */; };
+		05F244C521063B01003ABC56 /* UploadSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F244C421063B01003ABC56 /* UploadSiteViewController.swift */; };
+		05F559F2210A2A6A00456C8A /* CentralTendencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F559F1210A2A6A00456C8A /* CentralTendencyCalculator.swift */; };
+		05F559F4210AD18400456C8A /* SelectCoordsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F559F3210AD18400456C8A /* SelectCoordsMapViewController.swift */; };
 		A50E3908204A1665008506ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E3907204A1665008506ED /* AppDelegate.swift */; };
 		A50E390A204A1665008506ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E3909204A1665008506ED /* ViewController.swift */; };
 		A50E390D204A1665008506ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E390B204A1665008506ED /* Main.storyboard */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05F0AC2B210987C9008E456B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		05F244C421063B01003ABC56 /* UploadSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSiteViewController.swift; sourceTree = "<group>"; };
+		05F559F1210A2A6A00456C8A /* CentralTendencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralTendencyCalculator.swift; sourceTree = "<group>"; };
+		05F559F3210AD18400456C8A /* SelectCoordsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCoordsMapViewController.swift; sourceTree = "<group>"; };
 		A50E3904204A1665008506ED /* Consulta de sitios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consulta de sitios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E3907204A1665008506ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50E3909204A1665008506ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,15 +121,19 @@
 			children = (
 				A50E3907204A1665008506ED /* AppDelegate.swift */,
 				A50E3909204A1665008506ED /* ViewController.swift */,
+				05F244C421063B01003ABC56 /* UploadSiteViewController.swift */,
+				05F559F3210AD18400456C8A /* SelectCoordsMapViewController.swift */,
 				A517260E20D56C770008AF09 /* ViewControllerLogReg.swift */,
 				A5E517472065E3EE0065B3E2 /* MenuViewController.swift */,
 				A517261520D5923E0008AF09 /* BarAnnotation.swift */,
 				A517261320D57BD70008AF09 /* MapViewController.swift */,
+				05F0AC2B210987C9008E456B /* BottomSheetViewController.swift */,
 				A50E3910204A1665008506ED /* LaunchScreen.storyboard */,
 				A50E390B204A1665008506ED /* Main.storyboard */,
 				A50E390E204A1665008506ED /* Assets.xcassets */,
 				A50E3913204A1665008506ED /* Info.plist */,
 				A5141E9C20CC4D5E002CF224 /* TableViewController.swift */,
+				05F559F1210A2A6A00456C8A /* CentralTendencyCalculator.swift */,
 			);
 			path = "Consulta de sitios";
 			sourceTree = "<group>";
@@ -215,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = d182_raul_j;
 				TargetAttributes = {
 					A50E3903204A1665008506ED = {
@@ -286,11 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F559F4210AD18400456C8A /* SelectCoordsMapViewController.swift in Sources */,
 				A50E390A204A1665008506ED /* ViewController.swift in Sources */,
+				05F0AC2C210987C9008E456B /* BottomSheetViewController.swift in Sources */,
 				A517261420D57BD70008AF09 /* MapViewController.swift in Sources */,
+				05F244C521063B01003ABC56 /* UploadSiteViewController.swift in Sources */,
 				A5E517482065E3EE0065B3E2 /* MenuViewController.swift in Sources */,
 				A517260F20D56C770008AF09 /* ViewControllerLogReg.swift in Sources */,
 				A50E3908204A1665008506ED /* AppDelegate.swift in Sources */,
+				05F559F2210A2A6A00456C8A /* CentralTendencyCalculator.swift in Sources */,
 				A5141E9D20CC4D5E002CF224 /* TableViewController.swift in Sources */,
 				A517261620D5923E0008AF09 /* BarAnnotation.swift in Sources */,
 			);
@@ -361,6 +377,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -368,6 +385,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -418,6 +436,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -425,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

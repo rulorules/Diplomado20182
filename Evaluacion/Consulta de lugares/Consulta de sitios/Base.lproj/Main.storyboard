@@ -53,7 +53,7 @@
                     </tableView>
                     <connections>
                         <segue destination="Mxf-vw-QXe" kind="show" identifier="Consulta" id="R1T-9j-CTH"/>
-                        <segue destination="kv6-wu-cXd" kind="show" identifier="Configuracion" id="eGO-hK-y2T"/>
+                        <segue destination="kv6-wu-cXd" kind="show" identifier="Eventos" id="eGO-hK-y2T"/>
                         <segue destination="0je-fY-cJ2" kind="show" identifier="AcercaDe" id="D2o-6P-XOw"/>
                         <segue destination="ics-2Q-g3k" kind="show" identifier="submit" id="tti-Ll-kYK"/>
                     </connections>
@@ -84,7 +84,30 @@
                     <view key="view" contentMode="scaleToFill" id="APN-1a-6g4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loc" translatesAutoresizingMaskIntoConstraints="NO" id="j3I-z5-4SJ">
+                                <rect key="frame" x="171" y="120" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="VUp-wy-voR"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQL-mC-tSe">
+                                <rect key="frame" x="20" y="243" width="335" height="324"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Aplicación de consulta de lugares. Esta es una versión piloto que será implementada para una empresa real para la administración de sitios propios y será utilizada para la demostración del proyecto final del diplomado de iOS Developmet Lab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gRI-Dw-tTd" firstAttribute="bottom" secondItem="fQL-mC-tSe" secondAttribute="bottom" constant="100" id="HMM-7V-dOX"/>
+                            <constraint firstItem="gRI-Dw-tTd" firstAttribute="trailing" secondItem="fQL-mC-tSe" secondAttribute="trailing" constant="20" id="Lmr-NR-Thf"/>
+                            <constraint firstItem="j3I-z5-4SJ" firstAttribute="top" secondItem="gRI-Dw-tTd" secondAttribute="top" constant="56" id="OQ0-bU-3SZ"/>
+                            <constraint firstItem="fQL-mC-tSe" firstAttribute="top" secondItem="j3I-z5-4SJ" secondAttribute="bottom" constant="91" id="fWO-9O-YT9"/>
+                            <constraint firstItem="j3I-z5-4SJ" firstAttribute="centerX" secondItem="APN-1a-6g4" secondAttribute="centerX" id="gVf-pY-Ib2"/>
+                            <constraint firstItem="fQL-mC-tSe" firstAttribute="leading" secondItem="gRI-Dw-tTd" secondAttribute="leading" constant="20" id="uVo-GB-enS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gRI-Dw-tTd"/>
                     </view>
                 </viewController>
@@ -196,5 +219,6 @@
     </scenes>
     <resources>
         <image name="Empresa" width="100" height="16"/>
+        <image name="loc" width="32" height="32"/>
     </resources>
 </document>

@@ -53,6 +53,8 @@ class SelectCoordsMapViewController: UIViewController {
         let coord = [String(selectedLatitude),String(selectedLongitude)]
         //self.delegate?.childViewControllerResponse(controller: SelectCoordsMapViewController)
         delegate?.childViewControllerResponse(type: coord)
+        //self.addLocations(title: String("Mi casa"), recid: "123", latitude: 19.485680235508067, longitude: -99.134074609823102)
+        //sleep(1)
         _ = navigationController?.popViewController(animated: true)
         
     }
@@ -62,6 +64,12 @@ class SelectCoordsMapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func addLocations(title: String, recid: String, latitude: Double, longitude: Double){
+        let yodaBar = BarAnnotation(title: title, recid: recid, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        mapView.addAnnotation(yodaBar)
+        
+    }
+    
 }
 
 extension SelectCoordsMapViewController: MKMapViewDelegate {
@@ -155,10 +163,10 @@ extension SelectCoordsMapViewController: CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-        guard let lastLocation = locations.last else {return}
-        let zoomToMapPoint = MKMapPointForCoordinate((lastLocation.coordinate))  // we know we have a coordinate, so we can use force unwrapping here
-        let zoomToMapSize = MKMapSize(width: 10000, height: 10000)  // set a rectangle around the user's location
-        let zoomToMapRect = MKMapRect(origin: zoomToMapPoint, size: zoomToMapSize)
-        mapView.setVisibleMapRect(zoomToMapRect, animated: true)
+        //guard let lastLocation = locations.last else {return}
+        //let zoomToMapPoint = MKMapPointForCoordinate((lastLocation.coordinate))  // we know we have a coordinate, so we can use force unwrapping here
+        //let zoomToMapSize = MKMapSize(width: 1000, height: 1000)  // set a rectangle around the user's location
+        //let zoomToMapRect = MKMapRect(origin: zoomToMapPoint, size: zoomToMapSize)
+        //mapView.setVisibleMapRect(zoomToMapRect, animated: true)
     }
 }

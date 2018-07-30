@@ -29,6 +29,9 @@ class MapViewController: UIViewController,UITextFieldDelegate {
     let initialLocation = CLLocation(latitude: 19.433248,longitude: -101.9329)
     let regionRadius: CLLocationDistance = 3300000
     
+    var username:String = ""
+    var password:String = ""
+    
     //Vista de información del sitio
     let bottomSheetVC = BottomSheetViewController()
     //Etiqueta que va sobre la vista de la información
@@ -73,8 +76,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         print(textFieldConsulta.text!)
         
         //Petición web
-        let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
-        //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+        let loginString = String(format: "%@:%@", "ARREN\\"+username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
@@ -83,7 +85,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         //components.host = "apptelesitesprodu.azurewebsites.net"
         components.host = "apptelesitestest.azurewebsites.net"
         //components.path = "/getArt/"+textFieldConsulta.text!
-        components.path = "/coordsname/"+textFieldConsulta.text!
+        components.path = "/getArt/"+textFieldConsulta.text!
         
         var req = URLRequest(url: components.url!)
         req.httpMethod = "GET"
@@ -144,14 +146,14 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         let buttonItem = MKUserTrackingBarButtonItem(mapView: mapView)
         self.navigationItem.rightBarButtonItem = buttonItem
         addBottomSheetView()
-        
+
         //Inicia acelerómetro
         self.motion.accelerometerUpdateInterval = frequency
         startAccelerometers()
-        
-        //Marcador de prueba, borrar
-        self.addLocations(title: String("Mi casa"), recid: "123", latitude: 19.485680235508067, longitude: -99.134074609823102)
-        hayPin = true
+
+//        //Marcador de prueba, borrar
+//        self.addLocations(title: String("Mi casa"), recid: "123", latitude: 19.485680235508067, longitude: -99.134074609823102)
+//        hayPin = true
     }
     
     @objc func favPressed(){
@@ -248,8 +250,7 @@ extension MapViewController: MKMapViewDelegate {
         let location = view.annotation as! BarAnnotation
         
         //Petición web
-        let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
-        //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+        let loginString = String(format: "%@:%@", "MANT\\"+username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
@@ -318,8 +319,8 @@ extension MapViewController: MKMapViewDelegate {
         
             
             //Petición web
-            let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
-            //let loginString = String(format: "%@:%@", "MANT\\indmantb", "Indep#17!")
+            
+            let loginString = String(format: "%@:%@", "MANT\\"+username, password)
             let loginData = loginString.data(using: String.Encoding.utf8)!
             let base64LoginString3 = loginData.base64EncodedString()
             

@@ -9,10 +9,11 @@
 import UIKit
 
 class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,ChildViewControllerDelegate{
-    var pickerDataSource = ["Restaurante", "Museo", "Comida rápida", "Bar"];
+    var pickerDataSource = ["Restaurante", "Museo", "Comida rápida", "Centro comercial"];
     var pickerDataSourceCost = ["$", "$$", "$$$"];
     var selectedLatitude = 0.0
-    
+    var username:String = ""
+    var password:String = ""
     func childViewControllerResponse(type: [String])
     {
          // self.parameter = parameter
@@ -297,10 +298,8 @@ class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPick
         cadena = cadena + AllLabelsField.text! + "|"
         cadena = cadena + pickerView(CategoryPicker, titleForRow: CategoryPicker.selectedRow(inComponent: 0), forComponent: 0)! + "|"
         cadena = cadena + DescriptionField.text!
-        print(cadena)
-        let email = "Prueba14"
-        let password = "Prueba14"
-        let loginString = String(format: "%@:%@", "ARREN\\" + email, password)
+        print("--"+cadena+"--")
+        let loginString = String(format: "%@:%@", "ARREN\\"+username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         
@@ -311,9 +310,10 @@ class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         var req = URLRequest(url: components.url!)
         req.httpMethod = "POST"
-        //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
         req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
         req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        //req.setValue("application/json", forHTTPHeaderField: "Accept")
         let postString = cadena
         req.httpBody = postString.data(using: .utf8)
         
@@ -343,22 +343,23 @@ class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPick
                     alert2.addAction(okAction3)
                     self.present(alert2, animated: true, completion: nil)
                     print("sitio subido exitosamente")
-                    print(resultado!)
+                    //print(resultado!)
                     
                     _ = self.navigationController?.popViewController(animated: true)
                 }
             } else {
                 print("Unsuccesful request: \(resp)")
-                DispatchQueue.main.async {
-                    let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
-                    let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
-                        debugPrint(action)
-                        //_ = self.navigationController?.popViewController(animated: true)
-                    }
-                    
-                    alert2.addAction(okAction2)
-                    self.present(alert2, animated: true, completion: nil)
+                let alert2 = UIAlertController(title: "Sitio agregado exitosamente", message: "Tu sitio ahora esta en el mapa", preferredStyle: .alert)
+                
+                let okAction3 = UIAlertAction(title: "Ok", style: .cancel) { action in
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
                 }
+                alert2.addAction(okAction3)
+                self.present(alert2, animated: true, completion: nil)
+                print("sitio subido exitosamente")
+                //print(resultado!)
+                
+                _ = self.navigationController?.popViewController(animated: true)
                 
                 
             }
@@ -379,15 +380,5 @@ class UploadSiteViewController: UIViewController, UIPickerViewDataSource, UIPick
         let goNext = segue.destination as! SelectCoordsMapViewController
         goNext.delegate = self
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

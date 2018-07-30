@@ -147,7 +147,7 @@ class ViewControllerLogReg: UIViewController {
     
     func loginUser(){
         
-        let loginString = String(format: "%@:%@", "ARREN\\prueba14", "Prueba14")
+        let loginString = String(format: "%@:%@", "ARREN\\"+emailTextField.text!, passwordTextField.text!)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString3 = loginData.base64EncodedString()
         

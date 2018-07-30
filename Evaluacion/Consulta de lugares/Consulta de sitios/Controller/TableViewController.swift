@@ -9,12 +9,14 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
-    var opciones = ["Consulta", "Configuración", "Acerca de", "Subir sitio"]
+    var username:String = ""
+    var password:String = ""
+    
+    var opciones = ["Consulta", "Eventos", "Acerca de", "Subir sitio"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(username)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,6 +28,21 @@ class TableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is MapViewController
+        {
+            let vc = segue.destination as? MapViewController
+            vc?.username = username
+            vc?.password = password
+        }else if segue.destination is UploadSiteViewController
+        {
+            let vc = segue.destination as? UploadSiteViewController
+            vc?.username = username
+            vc?.password = password
+        }
     }
 
     // MARK: - Table view data source
@@ -46,14 +63,21 @@ class TableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = opciones[indexPath.row]
+        cell.imageView?.image  = UIImage(named: "loc")
+        cell.textLabel?.font  = UIFont.systemFont(ofSize: 30)
+        cell.textLabel?.textColor = UIColor.gray
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
             performSegue(withIdentifier: "Consulta", sender: nil)
         }else if(indexPath.row == 1){
-            performSegue(withIdentifier: "Configuracion", sender: nil)
+            performSegue(withIdentifier: "Eventos", sender: nil)
         }else if(indexPath.row == 2){
             performSegue(withIdentifier: "AcercaDe", sender: nil)
         }else if(indexPath.row == 3){

@@ -7,12 +7,6 @@
 //
 //Si la extension la haces al protocolo obligas a la clase a usarla
 
-
-//Buscar pizza
-//    View
-//    Controller
-//    Model
-//    Interface
 import UIKit
 import Foundation
 
@@ -64,10 +58,9 @@ class ViewController: UIViewController {
     
     let emailTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Correo electrónico"
+        tf.placeholder = "Usuario"
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.text = "Prueba14"
         return tf
     }()
     
@@ -77,7 +70,6 @@ class ViewController: UIViewController {
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = true
-        tf.text = "Prueba14"
         return tf
     }()
     
@@ -179,7 +171,7 @@ class ViewController: UIViewController {
                             let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
                             let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
                                 debugPrint(action)
-                                self.performSegue(withIdentifier: "Opciones", sender: nil)
+                                //self.performSegue(withIdentifier: "Opciones", sender: nil)
                             }
                         
                         alert2.addAction(okAction2)
@@ -222,6 +214,15 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is TableViewController
+        {
+            let vc = segue.destination as? TableViewController
+            vc?.username = emailTextField.text!
+            vc?.password = passwordTextField.text!
+        }
+    }
     
     func registerUser(){
         /*

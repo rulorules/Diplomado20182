@@ -75,6 +75,7 @@ class ViewController: UIViewController {
             })
 
         RunLoop.current.add(self.timer!, forMode: .defaultRunLoopMode)
+        
     }
 
 }

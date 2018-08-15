@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var username:String = ""
+    var password:String = ""
     var opciones = ["Consulta", "Configuración", "Acerca de"]
     
     override func viewDidLoad() {
@@ -28,6 +30,16 @@ class TableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is MapViewController
+        {
+            let vc = segue.destination as? MapViewController
+            vc?.username = username
+            vc?.password = password
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

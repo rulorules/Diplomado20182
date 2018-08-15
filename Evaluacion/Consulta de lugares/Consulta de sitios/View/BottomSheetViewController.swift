@@ -29,7 +29,7 @@ class BottomSheetViewController: UIViewController {
     }
     
     func prepareBackgroundView(){
-        let blurEffect = UIBlurEffect.init(style: .regular)
+     /*   let blurEffect = UIBlurEffect.init(style: .dark)
         //let visualEffect = UIVisualEffectView.init(effect: blurEffect)
         let bluredView = UIVisualEffectView.init(effect: blurEffect)
         //bluredView.contentView.addSubview(visualEffect)
@@ -38,8 +38,11 @@ class BottomSheetViewController: UIViewController {
         bluredView.frame = UIScreen.main.bounds
         
         view.insertSubview(bluredView, at: 0)
+        */
+       
+        //view?.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         
-        
+        //view?.backgroundColor = UIColor(white: 1, alpha: 0.5)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +56,7 @@ class BottomSheetViewController: UIViewController {
         UIView.animate(withDuration: 1, animations: {
             let frame = self.view.frame
             let yComponent = UIScreen.main.bounds.height
+            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
             self.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
         })
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05F06F27211E22C7007068FE /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F06F26211E22C7007068FE /* BottomSheetViewController.swift */; };
 		A50E3908204A1665008506ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E3907204A1665008506ED /* AppDelegate.swift */; };
 		A50E390A204A1665008506ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E3909204A1665008506ED /* ViewController.swift */; };
 		A50E390D204A1665008506ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E390B204A1665008506ED /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05F06F26211E22C7007068FE /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomSheetViewController.swift; path = "../../Evaluacion/Consulta de lugares/Consulta de sitios/View/BottomSheetViewController.swift"; sourceTree = "<group>"; };
 		A50E3904204A1665008506ED /* Consulta de sitios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consulta de sitios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E3907204A1665008506ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50E3909204A1665008506ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,10 +115,11 @@
 			children = (
 				A50E3907204A1665008506ED /* AppDelegate.swift */,
 				A50E3909204A1665008506ED /* ViewController.swift */,
+				A517261320D57BD70008AF09 /* MapViewController.swift */,
+				05F06F26211E22C7007068FE /* BottomSheetViewController.swift */,
 				A517260E20D56C770008AF09 /* ViewControllerLogReg.swift */,
 				A5E517472065E3EE0065B3E2 /* MenuViewController.swift */,
 				A517261520D5923E0008AF09 /* BarAnnotation.swift */,
-				A517261320D57BD70008AF09 /* MapViewController.swift */,
 				A50E3910204A1665008506ED /* LaunchScreen.storyboard */,
 				A50E390B204A1665008506ED /* Main.storyboard */,
 				A50E390E204A1665008506ED /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 				A50E3908204A1665008506ED /* AppDelegate.swift in Sources */,
 				A5141E9D20CC4D5E002CF224 /* TableViewController.swift in Sources */,
 				A517261620D5923E0008AF09 /* BarAnnotation.swift in Sources */,
+				05F06F27211E22C7007068FE /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

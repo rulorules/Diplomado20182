@@ -32,6 +32,7 @@ class BarAnnotation: NSObject,MKAnnotation {
         let placemark = MKPlacemark(coordinate: coordinate)
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = title
+    
         return mapItem
     }
 }

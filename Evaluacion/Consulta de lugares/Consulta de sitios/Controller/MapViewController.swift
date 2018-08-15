@@ -37,7 +37,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
     //Etiqueta que va sobre la vista de la información
     let textView: UILabel = {
         let tf = UILabel()
-        tf.textColor = UIColor.darkGray
+        tf.textColor = UIColor.white
         tf.font = UIFont.boldSystemFont(ofSize: 18)
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
@@ -182,9 +182,38 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    let closeButton: UIButton = { //Closure
+        let btn = UIButton(type: .system)
+        //btn.backgroundColor = UIColor(red: 195/255, green: 1/255, blue: 1/255, alpha: 1)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitleColor(UIColor.white, for: .normal)
+        btn.setImage(UIImage(named:"cancel-icon.png"), for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+        btn.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(closeWindow), for: .touchUpInside)
+        return btn
+    }()
+    
+    @objc func closeWindow(){
+        let height = view.frame.height
+        let width  = view.frame.width
+        //bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        bottomSheetVC.viewDidAppear(true)
+        UIView.animate(withDuration: 1, animations: {
+            self.bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        })
+    }
     
     func addBottomSheetView() {
         // 1- Init bottomSheetVC
+        bottomSheetVC.view.addSubview(closeButton)
+        /**Boton de cerrado******/
+        closeButton.rightAnchor.constraint(equalTo: bottomSheetVC.view.rightAnchor, constant: -20).isActive = true
+        closeButton.topAnchor.constraint(equalTo: bottomSheetVC.view.topAnchor, constant: 20).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        /*************************/
         
         // 2- Add bottomSheetVC as a child view
         self.addChildViewController(bottomSheetVC)
@@ -210,7 +239,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         
         //FavButton.leadingAnchor.constraint(equalTo: bottomSheetVC.view.leadingAnchor, constant: 200).isActive = true
         FavButton.rightAnchor.constraint(equalTo: bottomSheetVC.view.rightAnchor, constant: -20).isActive = true
-        FavButton.topAnchor.constraint(equalTo: bottomSheetVC.view.topAnchor, constant: 25).isActive = true
+        FavButton.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 25).isActive = true
         FavButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
 
         
@@ -239,6 +268,12 @@ extension MapViewController: MKMapViewDelegate {
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            //*****/
+            view.markerTintColor = UIColor.clear
+            let image = UIImage(named: "ioslab")!.withRenderingMode(.alwaysTemplate)
+            view.glyphImage = image
+            view.glyphTintColor = UIColor.orange
+            /*****/
         }
         return view
     }
@@ -303,8 +338,6 @@ extension MapViewController: MKMapViewDelegate {
             }
         })
         task.resume()
-        
-        
     }
     
     func mapViewWillStartLocatingUser(_ mapView: MKMapView){
@@ -314,9 +347,6 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool){
         
         if(mode == MKUserTrackingMode.follow){
-            print("que onda")
-            
-        
             
             //Petición web
             

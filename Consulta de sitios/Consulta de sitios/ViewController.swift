@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         tf.placeholder = "Usuario"
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.text = "indmantb"
+        
         return tf
     }()
     
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         //Constraints
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = true
-        tf.text = "Indep#17!"
+        
         return tf
     }()
     
@@ -121,7 +121,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     @objc func loginUser(){
         
         let email = emailTextField.text
@@ -129,7 +128,16 @@ class ViewController: UIViewController {
         
         if(email != "" && password != ""){
             
-           
+            let alert = UIAlertController(title: nil, message: "Accediendo...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+            
             let loginString = String(format: "%@:%@", "MANT\\" + email!, password!)
             let loginData = loginString.data(using: String.Encoding.utf8)!
             let base64LoginString3 = loginData.base64EncodedString()
@@ -159,46 +167,37 @@ class ViewController: UIViewController {
                 }
                 let resp = response as! HTTPURLResponse
                 if resp.statusCode == 200 {
-                    //      (withIdentifier: "Opciones", sender: nil)
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "Opciones", sender: nil)
+                        
+                            self.dismiss(animated: false, completion: nil)
+                            self.performSegue(withIdentifier: "Opciones", sender: nil)
                     }
                 } else {
                     print("Unsuccesful request: \(resp)")
-                    let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
-                    let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
-                        debugPrint(action)
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: false, completion: nil)
+                        let alert2 = UIAlertController(title: "Error en inicio de sesión", message: "Ocurrio un error al iniciar sesión, intentalo de nuevo", preferredStyle: .alert)
+                        let okAction2 = UIAlertAction(title: "OK", style: .default) { action in
+                            debugPrint(action)
+                            //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                        }
+                        
+                        alert2.addAction(okAction2)
+                        self.present(alert2, animated: true, completion: nil)
                     }
                     
-                    alert2.addAction(okAction2)
-                    self.present(alert2, animated: true, completion: nil)
                     
                 }
             })
             task.resume()
             //performSegue(withIdentifier: "Opciones", sender: nil)
-            /*
-             if let email = emailTextField.text, let password = passwordTextField.text{
-             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-             if user != nil{
-             print("Usuario autenticado")
-             let lc = LoginViewController()
-             self.navigationController?.pushViewController(lc, animated: true)
-             }else{
-             if let error = error?.localizedDescription{
-             print("Error al crear usuario por firebase", error)
-             }else{
-             print("Tu eres el error en sesion!!")
-             }
-             }
-             }
-             }*/
+            
         }else{
             let alert = UIAlertController(title: "Datos incompletos", message: "Debes introducir el usuario y la contraseña", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default) { action in
                 debugPrint(action)
             }
-           
+            
             
             alert.addAction(okAction)
             
@@ -207,6 +206,7 @@ class ViewController: UIViewController {
         
         
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -216,7 +216,12 @@ class ViewController: UIViewController {
             vc?.username = emailTextField.text!
             vc?.password = passwordTextField.text!
         }
+        let backItem = UIBarButtonItem()
+        backItem.title = "Cerrar sesión"
+        backItem.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
+    
     
     func registerUser(){
         /*

@@ -20,6 +20,9 @@ class MapViewController: UIViewController,UITextFieldDelegate {
     var username:String = ""
     var password:String = ""
 
+    var latC = 0.0
+    var longC = 0.0
+    
     //Vista de información del sitio
     let bottomSheetVC = BottomSheetViewController()
     //Etiqueta que va sobre la vista de la información
@@ -43,6 +46,27 @@ class MapViewController: UIViewController,UITextFieldDelegate {
     //Acción que se realiza al presionar el nombre del sitio
     @IBAction func textFieldPrimaryActionTriggered(_ sender: Any) {
         print(textFieldConsulta.text!)
+
+ //Empieza carga
+        let alert = UIAlertController(title: nil, message: "Consultando sitios...", preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor.black
+
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        
+        let regionRadius2: CLLocationDistance = 5000000
+        let center = CLLocationCoordinate2D(latitude: 19.432778, longitude: -99.133333)
+        
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(center, regionRadius2, regionRadius2)
+        mapView.setRegion(coordinateRegion, animated: true)
         
         //Petición web
         //let loginString = String(format: "%@:%@", "ARREN\\"+username, password)
@@ -66,6 +90,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
             let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
             print(resultado!)
+            
             guard error == nil else {
                 print("ERROR: \(error!)")
                 return
@@ -91,7 +116,6 @@ class MapViewController: UIViewController,UITextFieldDelegate {
                     }
                 }
                 
-                
             } else {
                 print("Unsuccesful request: \(resp)")
                 //self.performSegue(withIdentifier: "Opciones", sender: nil)
@@ -99,7 +123,11 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         })
         task.resume()
         //Oculta el teclado
-        textFieldConsulta.resignFirstResponder()
+        
+        
+        dismiss(animated: false, completion: nil)
+        
+        
     }
     
     
@@ -119,21 +147,60 @@ class MapViewController: UIViewController,UITextFieldDelegate {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
         longPressGesture.minimumPressDuration = 1.0
         self.mapView.addGestureRecognizer(longPressGesture)
+     
+//        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+//
+//        // Position Activity Indicator in the center of the main view
+//        myActivityIndicator.center = view.center
+//
+//        // If needed, you can prevent Acivity Indicator from hiding when stopAnimating() is called
+//        myActivityIndicator.hidesWhenStopped = false
+//
+//        // Start Activity Indicator
+//        myActivityIndicator.startAnimating()
+//
+//        // Call stopAnimating() when need to stop activity indicator
+//        //myActivityIndicator.stopAnimating()
+//        view.addSubview(myActivityIndicator)
     }
     
     @objc func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
         
-        if gesture.state == .ended {
+        if gesture.state == .began{
+            let alert = UIAlertController(title: nil, message: "Consultando sitios...", preferredStyle: .alert)
+            
+            
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+            
+            
+            //self.dismiss(animated: false, completion: nil)
+            
             let point = gesture.location(in: self.mapView)
             let coordinate = self.mapView.convert(point, toCoordinateFrom: self.mapView)
+            
             //print(coordinate)
             //Now use this coordinate to add annotation on map.
-            var annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            //Set title and subtitle if you want
-            annotation.title = ""
-            self.mapView.removeAnnotations(self.mapView.annotations)
-            self.mapView.addAnnotation(annotation)
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = coordinate
+//            //Set title and subtitle if you want
+//            annotation.title = ""
+//            self.mapView.removeAnnotations(self.mapView.annotations)
+//            self.mapView.addAnnotation(annotation)
+            
+            self.addLocations(title: "", recid: "a", latitude: coordinate.latitude, longitude: coordinate.longitude)
+            
+            let regionRadius2: CLLocationDistance = 3300
+            
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate, regionRadius2, regionRadius2)
+            mapView.setRegion(coordinateRegion, animated: true)
             
             //let loginString = String(format: "%@:%@", "MANT\\"+username, password)
             let loginString = String(format: "%@:%@", "MANT\\"+username, password)
@@ -157,6 +224,7 @@ class MapViewController: UIViewController,UITextFieldDelegate {
             let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
                 let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
                 print(resultado!)
+                self.dismiss(animated: false, completion: nil)
                 guard error == nil else {
                     print("ERROR: \(error!)")
                     return
@@ -168,7 +236,9 @@ class MapViewController: UIViewController,UITextFieldDelegate {
                 let resp = response as! HTTPURLResponse
                 if resp.statusCode == 200 {
                     
+                    
                     DispatchQueue.main.async {
+                        var cero = true
                         //self.performSegue(withIdentifier: "Opciones", sender: nil)
                         self.mapView.removeAnnotations(self.mapView.annotations)
                         
@@ -177,21 +247,39 @@ class MapViewController: UIViewController,UITextFieldDelegate {
                         cadena_sep[0].remove(at: cadena_sep[0].startIndex)
                         let sequence = stride(from: 0, to: cadena_sep.count - 1, by: 4)
                         for element in sequence {
+                            cero = false
                             self.addLocations(title: String(cadena_sep[element+2]), recid: cadena_sep[element+3], latitude: Double(cadena_sep[element])!, longitude: Double(cadena_sep[element+1])!)
                             
                         }
-                        
+                        self.addLocations(title: "", recid: "a", latitude: coordinate.latitude, longitude: coordinate.longitude)
+                       
+                        if(cero){
+                            let alert3 = UIAlertController(title: "Sin sitios", message: "No se encontraron sitios alrededor de este lugar", preferredStyle: .alert)
+                            let okAction3 = UIAlertAction(title: "OK", style: .default) { action in
+                                debugPrint(action)
+                            }
+                            
+                            alert3.addAction(okAction3)
+                            
+                            self.present(alert3, animated: true, completion: nil)
+                        }
                     }
+                    
                     
                     
                 } else {
                     print("Unsuccesful request: \(resp)")
+                   
                     //self.performSegue(withIdentifier: "Opciones", sender: nil)
                 }
             })
+            
             task.resume()
         }
-    }
+            
+        }
+        
+    
     
     func centerMapOnLocation(location: CLLocation){
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
@@ -269,94 +357,222 @@ class MapViewController: UIViewController,UITextFieldDelegate {
 
 //Agrega ventana de informacón del pin
 extension MapViewController: MKMapViewDelegate {
+    
     // 1
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // 2
+        var color = UIColor.green
         guard let annotation = annotation as? BarAnnotation else { return nil }
         // 3
         let identifier = "marker"
+        if(annotation.recid == "a"){
+            color = UIColor.blue
+            
+        }else{
+            color = UIColor.red
+        }
         var view: MKMarkerAnnotationView
         // 4
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
             view = dequeuedView
+            
         } else {
             // 5
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
+            //view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.leftCalloutAccessoryView = UIButton(type: .contactAdd)
+            
             //*****/
-            view.markerTintColor = UIColor.clear
-            let image = UIImage(named: "ioslab")!.withRenderingMode(.alwaysTemplate)
-            view.glyphImage = image
-            view.glyphTintColor = UIColor.orange
+//            view.markerTintColor = UIColor.clear
+//            let image = UIImage(named: "ioslab")!.withRenderingMode(.alwaysTemplate)
+//            view.glyphImage = image
+//            view.glyphTintColor = UIColor.orange
             /*****/
         }
+//        let gesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(cercanos))
+//        gesture.numberOfTapsRequired = 1
+//        view.isUserInteractionEnabled = true
+//        view.addGestureRecognizer(gesture)
+//
+//        latC = (view.annotation?.coordinate.latitude)!
+//        longC = (view.annotation?.coordinate.longitude)!
+        if(annotation.recid == "a"){
+            view.clusteringIdentifier = nil
+            view.isHidden = false
+            view.displayPriority = .required
+        }
+        view.markerTintColor = color
         return view
     }
-    
+    @objc func cercanos(){
+        print("holas")
+        print(latC)
+    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         let location = view.annotation as! BarAnnotation
+        switch control {
+        case let left where left == view.leftCalloutAccessoryView:
         
-        //Petición web
-        //let loginString = String(format: "%@:%@", "MANT\\"+username, password)
-        let loginString = String(format: "%@:%@", "MANT\\" + username, password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString3 = loginData.base64EncodedString()
-        
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "apptelesitesprodu.azurewebsites.net"
-        //components.host = "apptelesitestest.azurewebsites.net"
-        //components.path = "/getArt/"+textFieldConsulta.text!
-        components.path = "/siteinfo/"+location.recid
-        
-        var req = URLRequest(url: components.url!)
-        req.httpMethod = "GET"
-        //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
-        req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
-        req.setValue("2", forHTTPHeaderField: "AUTHMODE")
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
-            let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
-            print(resultado!)
-            guard error == nil else {
-                print("ERROR: \(error!)")
-                return
-            }
-            guard data != nil else {
-                print("Empty response")
-                return
-            }
-            let resp = response as! HTTPURLResponse
-            if resp.statusCode == 200 {
-                
-                DispatchQueue.main.async {
-                    var cadena_sep = resultado!.components(separatedBy: "|")
-                    
-                    cadena_sep[0].remove(at: cadena_sep[0].startIndex)
-                    
-                    self.textView.text = "ID Sitio: " + cadena_sep[0] + "\n\nSitio: " + cadena_sep[1] + "\n\nTipo de acceso: " + cadena_sep[8] + "\n\nTipo de torre: " + cadena_sep[2] + "\n\nAltura de torre: " + cadena_sep[3] + "\n\nAltura del inmueble: " + cadena_sep[4] + "\n\nDirección: " + cadena_sep[5] + "\n\nArrendador: " + cadena_sep[6] + "\n\nRenta: " + cadena_sep[7]
-                    UIView.animate(withDuration: 1, animations: {
-                        let frame = self.view.frame
-                        let yComponent = UIScreen.main.bounds.height - 400
-                        self.bottomSheetVC.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
-                    })
-                    
+            let alert = UIAlertController(title: nil, message: "Buscando sitios...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+            //Petición web
+            
+            //let loginString = String(format: "%@:%@", "MANT\\"+username, password)
+            let loginString = String(format: "%@:%@", "MANT\\" + username, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString3 = loginData.base64EncodedString()
+            
+            var components = URLComponents()
+            let lati = String(view.annotation!.coordinate.latitude)
+            let longi = String(view.annotation!.coordinate.longitude)
+            let regionRadius2: CLLocationDistance = 3300
+            
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(view.annotation!.coordinate, regionRadius2, regionRadius2)
+            mapView.setRegion(coordinateRegion, animated: true)
+            
+            //let asdf = String(locationManager.location!.coordinate.latitude)
+            components.scheme = "https"
+            components.host = "apptelesitesprodu.azurewebsites.net"
+            //components.host = "apptelesitestest.azurewebsites.net"
+            //components.path = "/getArt/"+textFieldConsulta.text!
+            components.path = "/coords/" + lati + "," + longi + "/"
+            
+            var req = URLRequest(url: components.url!)
+            req.httpMethod = "GET"
+            //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
+            req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
+            req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+                let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+                print(resultado!)
+                self.dismiss(animated: false, completion: nil)
+                guard error == nil else {
+                    print("ERROR: \(error!)")
+                    return
                 }
-                
-                
-            } else {
-                print("Unsuccesful request: \(resp)")
-                //self.performSegue(withIdentifier: "Opciones", sender: nil)
-            }
-        })
-        task.resume()
+                guard data != nil else {
+                    print("Empty response")
+                    return
+                }
+                let resp = response as! HTTPURLResponse
+                if resp.statusCode == 200 {
+                    
+                    DispatchQueue.main.async {
+                        //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                        self.mapView.removeAnnotations(self.mapView.annotations)
+                        
+                        var cadena_sep = resultado!.components(separatedBy: "|")
+                        
+                        cadena_sep[0].remove(at: cadena_sep[0].startIndex)
+                        let sequence = stride(from: 0, to: cadena_sep.count - 1, by: 4)
+                        for element in sequence {
+                            self.addLocations(title: String(cadena_sep[element+2]), recid: cadena_sep[element+3], latitude: Double(cadena_sep[element])!, longitude: Double(cadena_sep[element+1])!)
+                            
+                        }
+                        self.addLocations(title: "", recid: "a", latitude: Double(lati)!, longitude: Double(longi)!)
+                        
+                    }
+                    
+                    
+                } else {
+                    print("Unsuccesful request: \(resp)")
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                }
+            })
+            task.resume()
+            break
+        case let right where right == view.rightCalloutAccessoryView:
+            let alert = UIAlertController(title: nil, message: "Consultando...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            let regionRadius2: CLLocationDistance = 1500
+
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(view.annotation!.coordinate, regionRadius2, regionRadius2)
+            mapView.setRegion(coordinateRegion, animated: true)
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+            //Petición web
+            //let loginString = String(format: "%@:%@", "MANT\\"+username, password)
+            let loginString = String(format: "%@:%@", "MANT\\" + username, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString3 = loginData.base64EncodedString()
+            
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = "apptelesitesprodu.azurewebsites.net"
+            //components.host = "apptelesitestest.azurewebsites.net"
+            //components.path = "/getArt/"+textFieldConsulta.text!
+            components.path = "/siteinfo/"+location.recid
+            
+            var req = URLRequest(url: components.url!)
+            req.httpMethod = "GET"
+            //req.addValue("Basic 19c48aff0dae4a20b5dd2eb322ae37a2", forHTTPHeaderField: "Authorization")
+            req.setValue("Basic \(base64LoginString3)", forHTTPHeaderField: "Authorization")
+            req.setValue("2", forHTTPHeaderField: "AUTHMODE")
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+                let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+                print(resultado!)
+                self.dismiss(animated: false, completion: nil)
+                guard error == nil else {
+                    print("ERROR: \(error!)")
+                    return
+                }
+                guard data != nil else {
+                    print("Empty response")
+                    return
+                }
+                let resp = response as! HTTPURLResponse
+                if resp.statusCode == 200 {
+                    
+                    DispatchQueue.main.async {
+                        var cadena_sep = resultado!.components(separatedBy: "|")
+                        
+                        cadena_sep[0].remove(at: cadena_sep[0].startIndex)
+                        
+                        self.textView.text = "ID Sitio: " + cadena_sep[0] + "\n\nSitio: " + cadena_sep[1] + "\n\nTipo de acceso: " + cadena_sep[8] + "\n\nTipo de torre: " + cadena_sep[2] + "\n\nAltura de torre: " + cadena_sep[3] + "\n\nAltura del inmueble: " + cadena_sep[4] + "\n\nDirección: " + cadena_sep[5] + "\n\nArrendador: " + cadena_sep[6] + "\n\nRenta: " + cadena_sep[7]
+                        UIView.animate(withDuration: 1, animations: {
+                            let frame = self.view.frame
+                            let yComponent = UIScreen.main.bounds.height - 400
+                            self.bottomSheetVC.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
+                        })
+                        
+                    }
+                    
+                    
+                } else {
+                    print("Unsuccesful request: \(resp)")
+                    //self.performSegue(withIdentifier: "Opciones", sender: nil)
+                }
+            })
+            task.resume()
+            break
+        default:
+            break
+        }
+        
+        
     }
     
     func mapViewWillStartLocatingUser(_ mapView: MKMapView){
@@ -366,6 +582,15 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool){
         
         if(mode == MKUserTrackingMode.follow){
+            let alert = UIAlertController(title: nil, message: "Buscando sitios...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
                       //Petición web
             
             //let loginString = String(format: "%@:%@", "MANT\\"+username, password)
@@ -390,6 +615,7 @@ extension MapViewController: MKMapViewDelegate {
             let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
                 let resultado = (NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
                 print(resultado!)
+                self.dismiss(animated: false, completion: nil)
                 guard error == nil else {
                     print("ERROR: \(error!)")
                     return
@@ -515,5 +741,8 @@ extension MapViewController: CLLocationManagerDelegate{
         
         // Do something with the location.
 }
+    
+    
 }
+
 

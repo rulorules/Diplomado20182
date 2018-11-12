@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Consulta_de_sitios" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wOY-br-LQy">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="telesites_logo" id="n9P-PG-cFs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="telesites-logo" id="n9P-PG-cFs">
                             <inset key="largeContentSizeImageInsets" minX="200" minY="200" maxX="200" maxY="200"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
@@ -100,17 +100,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xvF-hS-Hvm">
-                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xvF-hS-Hvm">
+                                <rect key="frame" x="1" y="96" width="375" height="572"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="zrW-Mn-dtv" appends="YES" id="q26-DW-N9p"/>
                                 </connections>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-pA-Pux">
-                                <rect key="frame" x="16" y="87" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-pA-Pux">
+                                <rect key="frame" x="1" y="65" width="373" height="30"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ELS-kG-6ra"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -121,6 +123,16 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Kh-TV-piF" firstAttribute="trailing" secondItem="tT1-pA-Pux" secondAttribute="trailing" constant="1" id="09X-Zr-8n6"/>
+                            <constraint firstItem="tT1-pA-Pux" firstAttribute="top" secondItem="4Kh-TV-piF" secondAttribute="top" constant="1" id="JIA-EH-Xqw"/>
+                            <constraint firstItem="xvF-hS-Hvm" firstAttribute="leading" secondItem="4Kh-TV-piF" secondAttribute="leading" constant="1" id="S1g-av-H5X"/>
+                            <constraint firstItem="xvF-hS-Hvm" firstAttribute="bottom" secondItem="4Kh-TV-piF" secondAttribute="bottom" constant="1" id="m2c-eI-fO6"/>
+                            <constraint firstItem="xvF-hS-Hvm" firstAttribute="trailing" secondItem="4Kh-TV-piF" secondAttribute="trailing" constant="1" id="pHO-BM-6fn"/>
+                            <constraint firstItem="xvF-hS-Hvm" firstAttribute="bottom" secondItem="4Kh-TV-piF" secondAttribute="bottom" constant="1" id="sU7-n0-AD4"/>
+                            <constraint firstItem="xvF-hS-Hvm" firstAttribute="top" secondItem="tT1-pA-Pux" secondAttribute="bottom" constant="1" id="tOn-As-8Rv"/>
+                            <constraint firstItem="tT1-pA-Pux" firstAttribute="leading" secondItem="4Kh-TV-piF" secondAttribute="leading" constant="1" id="vN4-uN-Epk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Kh-TV-piF"/>
                     </view>
                     <connections>
@@ -174,6 +186,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="telesites_logo" width="100" height="16"/>
+        <image name="telesites-logo" width="200" height="33"/>
     </resources>
 </document>

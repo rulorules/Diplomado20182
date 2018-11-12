@@ -12,8 +12,8 @@ class TableViewController: UITableViewController {
 
     var username:String = ""
     var password:String = ""
-    var opciones = ["Consulta", "Configuración", "Acerca de"]
-    
+    //var opciones = ["Consulta", "Configuración", "Acerca de"]
+    var opciones = ["Consulta"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +38,14 @@ class TableViewController: UITableViewController {
             vc?.username = username
             vc?.password = password
         }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Atrás"
+        backItem.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
+    
+    
     
     // MARK: - Table view data source
 
@@ -49,7 +56,8 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 1
+        //return 3
     }
 
     
